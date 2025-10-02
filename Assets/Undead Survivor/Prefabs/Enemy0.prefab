@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 9017198045235193597}
   - component: {fileID: 6517930394133720003}
   - component: {fileID: 8434553743370370697}
-  m_Layer: 0
-  m_Name: Dead
+  - component: {fileID: 5373904584562544308}
+  m_Layer: 6
+  m_Name: Enemy0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,7 +147,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8959722031055099112}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -185,3 +186,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1.2}
   m_EdgeRadius: 0
+--- !u!114 &5373904584562544308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8959722031055099112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af0e5ef9271dcc0448a5361e4c0d80df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10
+  difficalty: 1
+  pow: 1
+  point: 1
+  speed: 1

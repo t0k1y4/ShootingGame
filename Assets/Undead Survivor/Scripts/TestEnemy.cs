@@ -20,6 +20,7 @@ public class TestEnemy : MonoBehaviour
     {
         hp *= difficalty;
         pow *= difficalty;
+        center = transform.position;
     }
 
     void Update()
