@@ -706,7 +706,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2791601869706196165}
   - component: {fileID: 4574225241182329530}
-  - component: {fileID: 2629083938201647683}
   - component: {fileID: 2774276731298810258}
   m_Layer: 8
   m_Name: 'baris '
@@ -789,19 +788,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.3544407, y: 14.745073}
   m_EdgeRadius: 0
---- !u!114 &2629083938201647683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5401326924849471692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c47619bd8809c641af10906d4d625be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHp: 100
 --- !u!114 &2774276731298810258
 MonoBehaviour:
   m_ObjectHideFlags: 0
