@@ -8,12 +8,13 @@ public class BulletController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-    if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy"))
         {
             te = other.collider.GetComponent<Enemy>();
-            if(te != null){
-            te.Damage(damage);
-        }
+            if (te != null)
+            {
+                te.Damage(damage);
+            }
         }
         Destroy(gameObject);
     }
