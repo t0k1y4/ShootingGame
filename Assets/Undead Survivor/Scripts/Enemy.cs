@@ -55,6 +55,7 @@ public class Enemy : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {
+        
         if (collision.gameObject.CompareTag("Wall"))
         {
             atkTimer += Time.deltaTime;

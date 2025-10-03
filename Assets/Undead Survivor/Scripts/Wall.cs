@@ -14,6 +14,8 @@ public class Wall : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            WallMaxHp = 100;
+            WallHp = WallMaxHp;
         }
         else
         {

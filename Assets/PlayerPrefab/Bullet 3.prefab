@@ -158,7 +158,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 448
+    m_Bits: 384
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -175,3 +175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 855d74b2a17c7464183392e431b19ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetTag: Enemy
+  damage: 5
+  te: {fileID: 0}
