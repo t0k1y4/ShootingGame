@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class TestEnemy : MonoBehaviour
 {
-    public float hp=10;
-    public float difficalty=1;
-    public float pow=1;
+    public float hp = 10;
+    public float difficalty = 1;
+    public float pow = 1;
+    public BarricadeController bc;
 
 
     // 回転の中心点
@@ -19,7 +20,7 @@ public class TestEnemy : MonoBehaviour
     void Start()
     {
         hp *= difficalty;
-        pow *= difficalty;
+        pow *= -difficalty;
     }
 
     void Update()
@@ -42,5 +43,12 @@ public class TestEnemy : MonoBehaviour
     public void Damage(float damage)
     {
         hp -= damage;
+        Debug.Log(damage + "を受けた");
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        bc = other.collider.GetComponent<BarricadeController>();
+        bc.ChangeHealth(pow);
     }
 }
