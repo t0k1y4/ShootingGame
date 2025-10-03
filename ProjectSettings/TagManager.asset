@@ -3,9 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
+<<<<<<< HEAD
   tags:
   - Enemy
   - Wall
+=======
+  tags: []
+>>>>>>> test
   layers:
   - Default
   - TransparentFX
@@ -40,6 +44,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: background
+    uniqueID: 2125249929
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
