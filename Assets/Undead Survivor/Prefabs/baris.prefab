@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2992830126276015439}
   - component: {fileID: 2741803664638871682}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bari1_0 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 9127468183964146}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.498226, y: 2.0992908, z: 0.06489873}
+  m_LocalPosition: {x: 0, y: 2.0992908, z: 0.06489873}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -97,7 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2670141577744909429}
   - component: {fileID: 5971743839499517870}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bari1_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ Transform:
   m_GameObject: {fileID: 143068025553758485}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.498226, y: -1.3407092, z: 0.06489873}
+  m_LocalPosition: {x: 0, y: -1.3407092, z: 0.06489873}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -184,7 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 700883569466134577}
   - component: {fileID: 2791261874683788421}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bari1_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ Transform:
   m_GameObject: {fileID: 3360346884017508978}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.498226, y: 5.679291, z: 0.06489873}
+  m_LocalPosition: {x: 0, y: 5.679291, z: 0.06489873}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -271,7 +271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6952516850235265801}
   - component: {fileID: 7974859278556905868}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bari1_0 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +287,7 @@ Transform:
   m_GameObject: {fileID: 3427244134741245581}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.498226, y: -5.2607093, z: 0.06489873}
+  m_LocalPosition: {x: 0, y: -5.2607093, z: 0.06489873}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -358,7 +358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5623780718067657508}
   - component: {fileID: 3152751984646125272}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bari1_0 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -374,7 +374,7 @@ Transform:
   m_GameObject: {fileID: 3952153455607589666}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.498226, y: -2.4107094, z: 0.06489873}
+  m_LocalPosition: {x: 0, y: -2.4107094, z: 0.06489873}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -445,7 +445,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7849668085877451741}
   - component: {fileID: 1132328952112865220}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bari1_0 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,7 +461,7 @@ Transform:
   m_GameObject: {fileID: 4182230869419859072}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.498226, y: -4.4507093, z: 0.06489873}
+  m_LocalPosition: {x: 0, y: -4.4507093, z: 0.06489873}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -532,7 +532,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2065349839742428600}
   - component: {fileID: 2539893297342003953}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bari1_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -548,7 +548,7 @@ Transform:
   m_GameObject: {fileID: 4229720334115851524}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.498226, y: 4.539291, z: 0.06489873}
+  m_LocalPosition: {x: 0, y: 4.539291, z: 0.06489873}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -619,7 +619,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5660890386421469592}
   - component: {fileID: 746647075238838012}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bari1_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -635,7 +635,7 @@ Transform:
   m_GameObject: {fileID: 5063148409182094115}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.498226, y: 6.7992907, z: 0.06489873}
+  m_LocalPosition: {x: 0, y: 6.7992907, z: 0.06489873}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -705,7 +705,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2791601869706196165}
-  m_Layer: 0
+  - component: {fileID: 4574225241182329530}
+  - component: {fileID: 2629083938201647683}
+  m_Layer: 8
   m_Name: baris
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -740,6 +742,65 @@ Transform:
   - {fileID: 2911502798957910143}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &4574225241182329530
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5401326924849471692}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.025082111, y: 0.30098724}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 2.3544407, y: 14.745073}
+  m_EdgeRadius: 0
+--- !u!114 &2629083938201647683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5401326924849471692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c47619bd8809c641af10906d4d625be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 100
 --- !u!1 &5680057438878157008
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,7 +811,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5895640132948337186}
   - component: {fileID: 3863149827658192743}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bari1_0 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -766,7 +827,7 @@ Transform:
   m_GameObject: {fileID: 5680057438878157008}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.498226, y: -3.4307094, z: 0.06489873}
+  m_LocalPosition: {x: 0, y: -3.4307094, z: 0.06489873}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -837,7 +898,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2911502798957910143}
   - component: {fileID: 1705522249271781792}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bari1_0 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -853,7 +914,7 @@ Transform:
   m_GameObject: {fileID: 7100889185814598356}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.498226, y: -6.0607095, z: 0.06489873}
+  m_LocalPosition: {x: 0, y: -6.0607095, z: 0.06489873}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -924,7 +985,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3845423098807429895}
   - component: {fileID: 381923347587040081}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bari1_0 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -940,7 +1001,7 @@ Transform:
   m_GameObject: {fileID: 7767347454938643903}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.498226, y: 3.3192906, z: 0.06489873}
+  m_LocalPosition: {x: 0, y: 3.3192906, z: 0.06489873}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1011,7 +1072,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3208961624500369043}
   - component: {fileID: 3054830053495742071}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bari1_0 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1027,7 +1088,7 @@ Transform:
   m_GameObject: {fileID: 7968928742824979560}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.498226, y: 0.9292908, z: 0.06489873}
+  m_LocalPosition: {x: 0, y: 0.9292908, z: 0.06489873}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1098,7 +1159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2542448762434161429}
   - component: {fileID: 3178981285644095747}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bari1_0 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1114,7 +1175,7 @@ Transform:
   m_GameObject: {fileID: 8287165181098499278}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.498226, y: -0.17070925, z: 0.06489873}
+  m_LocalPosition: {x: 0, y: -0.17070925, z: 0.06489873}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
