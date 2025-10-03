@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    AudioSource deadSound;
     public float hp = 10.0f;
     public float difficalty = 1.0f;
     public float pow = 1.0f;
@@ -24,6 +25,9 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.linearVelocity = new Vector2(speed, rb.linearVelocityY);
         wallInstance = Wall.Instance;
+
+        //死んだ音
+        deadSound = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -40,22 +44,28 @@ public class Enemy : MonoBehaviour
     public void Damage(float damage)
     {
         hp -= damage;
-        if (hp <= 0) Destroy(gameObject);
+        //deadSound.Play();
+        if (hp <= 0)
+        {
+            //敵が死んだらサウンドを再生
+            AudioSource.PlayClipAtPoint(deadSound.clip, transform.position);
+            Destroy(gameObject);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
-{
-    if (collision.gameObject.CompareTag("Wall"))
     {
-        // 壁にぶつかったら速度を0に
-        rb.linearVelocity = Vector2.zero; 
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            // 壁にぶつかったら速度を0に
+            rb.linearVelocity = Vector2.zero;
+        }
     }
-}
 
 
     void OnCollisionStay2D(Collision2D collision)
     {
-        
+
         if (collision.gameObject.CompareTag("Wall"))
         {
             atkTimer += Time.deltaTime;

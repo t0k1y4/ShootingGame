@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class BulletShooter : MonoBehaviour
 {
+    public AudioSource shotSound;          //打つ時の音
     public string targetTag = "Enemy";     // ターゲットのタグ名
     public GameObject bulletPrefab;         // 弾のPrefab
     public float bulletSpeed = 10f;         // 弾速（固定）
@@ -11,6 +12,7 @@ public class BulletShooter : MonoBehaviour
     void Awake()
     {
         InvokeRepeating("ShootClosestTarget", 1f, 1f);
+        shotSound = GetComponent<AudioSource>();       //打つ時の音
     }
 
     void ShootClosestTarget()
@@ -63,12 +65,16 @@ public class BulletShooter : MonoBehaviour
         Vector2 aimPoint = targetPos + targetVelocity * t;
         Vector2 direction = (aimPoint - shooterPos).normalized;
 
+        //弾を生成する
         GameObject bullet = Instantiate(bulletPrefab, shooterPos, Quaternion.identity);
         Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
         bulletRb.linearVelocity = direction * bulletSpeed;
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         bullet.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+        //弾のサウンドを再生
+        shotSound.Play();
 
         Debug.Log($"最も近いターゲット {targetObj.name} に弾を発射しました");
     }

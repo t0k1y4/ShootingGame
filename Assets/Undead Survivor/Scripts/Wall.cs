@@ -3,13 +3,16 @@ using UnityEngine;
 public class Wall : MonoBehaviour
 {
     public static Wall Instance { get; private set; }
-
+    AudioSource destroySound;    //バリケード崩壊音
     public float WallHp { get; private set; }
     public float WallMaxHp { get; private set; }
 
 
     private void Awake()
     {
+        //死んだ音
+        destroySound = GetComponent<AudioSource>();
+
         if (Instance == null)
         {
             Instance = this;
@@ -31,6 +34,8 @@ public class Wall : MonoBehaviour
         Debug.Log(WallHp);
         if (WallHp <= 0)
         {
+            //バリケードが壊れたらサウンドを再生
+            AudioSource.PlayClipAtPoint(destroySound.clip, transform.position);
             Debug.Log("ゲームオーバー");
             // ゲームオーバー処理をここに記述
             // GameManager.Instance.GameOver();
