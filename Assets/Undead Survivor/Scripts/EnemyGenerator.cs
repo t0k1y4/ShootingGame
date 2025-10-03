@@ -19,7 +19,7 @@ public class EnemyGenerator : MonoBehaviour
         int num = Random.Range(0, 2);
         if (time > genTime)
         {
-            float randomY = Random.Range(-4f, 2.5f);
+            float randomY = Random.Range(-4f, 2.0f);
             Vector3 spawnPosition = new Vector3(-13f, randomY, 0f);
             Instantiate(enemyPrefabs[num], spawnPosition, Quaternion.identity);
             time = 0;

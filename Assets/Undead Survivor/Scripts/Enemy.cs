@@ -2,11 +2,15 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float hp=10.0f;
-    public float difficalty=1.0f;
-    public float pow=1.0f;
+    public float hp = 10.0f;
+    public float difficalty = 1.0f;
+    public float pow = 1.0f;
     public float point = 1.0f;
     public float speed = 1.0f;
+    public bool isBound;
+    public float atkInterval = 1.0f;
+    public float atkTimer = 0f;
+    Wall wallInstance;
     Animator at;
     Rigidbody2D rb;
 
@@ -19,20 +23,14 @@ public class Enemy : MonoBehaviour
         at = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         rb.linearVelocity = new Vector2(speed, rb.linearVelocityY);
+        wallInstance = Wall.Instance;
     }
 
     void Update()
     {
 
-
-        if (hp <= 0)
-        {
-            Destroy(gameObject);
-        }
-
-    
     }
-    
+
     void FixedUpdate()
     {
         // velocityを直接操作して、X軸方向の速度を一定に保つ
@@ -41,7 +39,30 @@ public class Enemy : MonoBehaviour
 
     public void Damage(float damage)
     {
-
         hp -= damage;
+        if (hp <= 0) Destroy(gameObject);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+{
+    if (collision.gameObject.CompareTag("Wall"))
+    {
+        // 壁にぶつかったら速度を0に
+        rb.linearVelocity = Vector2.zero; 
+    }
+}
+
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            atkTimer += Time.deltaTime;
+            if (atkTimer > atkInterval)
+            {
+                wallInstance.WallDamage(pow);
+                atkTimer = 0;
+            }
+        }
     }
 }
