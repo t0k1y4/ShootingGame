@@ -202,7 +202,7 @@ MonoBehaviour:
   difficalty: 1
   pow: 10
   point: 1
-  speed: 0.5
+  speed: 0.3
   isBound: 0
   atkInterval: 1
   atkTimer: 0

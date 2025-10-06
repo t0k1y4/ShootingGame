@@ -3,20 +3,28 @@ using UnityEngine;
 public class EnemyGenerator : MonoBehaviour
 {
     public GameObject[] enemyPrefabs;
-    public float time=0;
-    public float genTime = 2;
+    public float time = 0;
+    public float maxGenTime = 2f;
+    public float genTime;
+    public float a;  // 減少量
+    int num;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        genTime = maxGenTime;
     }
 
-    // Update is called once per frame
     void Update()
     {
         time += Time.deltaTime;
-        int num = Random.Range(0, 2);
+        if (genTime < 1.5f)
+        {
+            num = Random.Range(0, 3);
+        }
+        else
+        {
+            num = Random.Range(0, 2);
+        }
         if (time > genTime)
         {
             float randomY = Random.Range(-4f, 2.0f);
@@ -25,4 +33,18 @@ public class EnemyGenerator : MonoBehaviour
             time = 0;
         }
     }
+
+    public void ChangeGenTime(int difficalty)
+    {
+        genTime = maxGenTime / (a * difficalty + 1f);
+
+        if (difficalty % 10 == 0)
+        {
+            num = 3;
+            Vector3 spawnPosition = new Vector3(-12f, 0f, 0f);
+            Instantiate(enemyPrefabs[num], spawnPosition, Quaternion.identity);
+        } 
+
+    }
+    
 }
