@@ -7483,8 +7483,12 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 8959722031055099112, guid: 4b438fa18523f78449b36ce3bd3e2f6f, type: 3}
   - {fileID: 4838100115983212027, guid: 08fde624233e2b84a924d77d0815c8f8, type: 3}
+  - {fileID: 7012456590729482320, guid: a9f6663965f0c3746a21734241c8f4f7, type: 3}
+  - {fileID: 2745846113316429843, guid: 2fa7efee150dc4e43873a52416fa0b01, type: 3}
   time: 0
-  genTime: 2
+  maxGenTime: 2
+  genTime: 0
+  a: 0.1
 --- !u!4 &1648981740
 Transform:
   m_ObjectHideFlags: 0
@@ -8266,6 +8270,14 @@ PrefabInstance:
     - target: {fileID: 2996849861098085534, guid: 07545470b28f0214a9f9f6144aa853b4, type: 3}
       propertyPath: m_Name
       value: GameController
+      objectReference: {fileID: 0}
+    - target: {fileID: 5750381159659899577, guid: 07545470b28f0214a9f9f6144aa853b4, type: 3}
+      propertyPath: eg
+      value: 
+      objectReference: {fileID: 1648981738}
+    - target: {fileID: 5750381159659899577, guid: 07545470b28f0214a9f9f6144aa853b4, type: 3}
+      propertyPath: diff
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5750381159659899577, guid: 07545470b28f0214a9f9f6144aa853b4, type: 3}
       propertyPath: wall

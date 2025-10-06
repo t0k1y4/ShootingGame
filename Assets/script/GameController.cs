@@ -9,6 +9,8 @@ public class GameController : MonoBehaviour
 
     public GameObject wall;
     Wall wallScript;
+    public GameObject eg;
+    EnemyGenerator egScript;
     public TextMeshProUGUI killedText;
     public TextMeshProUGUI difficaltyText;
     public TextMeshProUGUI wallHpText;
@@ -16,6 +18,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         wallScript = wall.GetComponent<Wall>();
+        egScript = eg.GetComponent<EnemyGenerator>();
     }
 
     void Update()
@@ -39,6 +42,8 @@ public class GameController : MonoBehaviour
         if (killed % diff == 0)
         {
             difficalty += 1;
+            egScript.ChangeGenTime(difficalty);
         }
     }
+    
 }
