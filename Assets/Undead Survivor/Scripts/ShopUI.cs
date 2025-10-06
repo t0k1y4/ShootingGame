@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI; // UIコンポーネントを使うために必要
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.U2D.Aseprite;
 
 public class ShopUI : MonoBehaviour
 {
@@ -49,6 +50,7 @@ public class ShopUI : MonoBehaviour
     public void Button0()
     {
         smg.BuyWeapon(0);
+
     }
 
     public void Button1()

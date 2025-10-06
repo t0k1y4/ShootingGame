@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class ShopManager : MonoBehaviour
 {
-    // プレイヤーのインベントリへの参照
-    public Inventory playerInventory;
 
     // --- ここから追加 ---
     // 販売する可能性のある全武器データ
@@ -58,18 +56,6 @@ public class ShopManager : MonoBehaviour
         shopUI.UpdateShopUI();
     }
 
-    // UIを更新するメソッド（UIスクリプトに任せることも多い）
-    private void UpdateShopUI()
-    {
-        // TODO: availableWeaponsのリストを使ってUIを更新する
-        // 例: UIのボタンに武器のアイコンと名前を表示する
-        Debug.Log("ショップの売り物を更新しました。");
-        for(int i = 0; i < availableWeapons.Count; i++)
-        {
-            Debug.Log($"商品 {i+1}: {availableWeapons[i].weaponName}");
-        }
-    }
-
     // 購入ボタンのOnClickイベントで呼び出すメソッド
     // indexで何番目の武器を買ったかを指定する
     public void BuyWeapon(int index)
@@ -77,9 +63,9 @@ public class ShopManager : MonoBehaviour
         if (index >= 0 && index < availableWeapons.Count)
         {
             WeaponData weaponToBuy = availableWeapons[index];
-            if (playerInventory != null && weaponToBuy != null)
+            if (PlayerStats.Instance != null && weaponToBuy != null)
             {
-                playerInventory.AddWeapon(weaponToBuy);
+                PlayerStats.Instance.AddWeapon(weaponToBuy);
             }
         }
     }
