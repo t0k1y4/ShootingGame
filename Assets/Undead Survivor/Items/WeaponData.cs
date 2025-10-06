@@ -10,5 +10,6 @@ public class WeaponData : ScriptableObject
     public Sprite icon;
     public int price;
     public String text;
+    public float rate;
     // 必要に応じて、武器の種類（ソード、アックスなど）、説明文などを追加
 }

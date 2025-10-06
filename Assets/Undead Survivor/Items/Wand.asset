@@ -17,3 +17,4 @@ MonoBehaviour:
   icon: {fileID: 8637182175471836850, guid: cb747dd5cf6c12a49a6cb46ce1e9880d, type: 3}
   price: 10
   text: default
+  rate: 1

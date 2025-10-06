@@ -17,3 +17,4 @@ MonoBehaviour:
   icon: {fileID: 0}
   price: 20
   text: default
+  rate: 1
