@@ -14,8 +14,8 @@ public class Enemy : MonoBehaviour
     Wall wallInstance;
     Animator at;
     Rigidbody2D rb;
-
-
+    GameObject gc;
+    GameController gameController;
 
     void Start()
     {
@@ -25,6 +25,8 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.linearVelocity = new Vector2(speed, rb.linearVelocityY);
         wallInstance = Wall.Instance;
+        gc = GameObject.Find("GameController");
+        gameController = gc.GetComponent<GameController>();
 
         //死んだ音
         deadSound = GetComponent<AudioSource>();
@@ -47,6 +49,7 @@ public class Enemy : MonoBehaviour
         //deadSound.Play();
         if (hp <= 0)
         {
+            gameController.KilledCount();
             //敵が死んだらサウンドを再生
             AudioSource.PlayClipAtPoint(deadSound.clip, transform.position);
             Destroy(gameObject);

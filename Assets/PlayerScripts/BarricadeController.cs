@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BarricadeController : MonoBehaviour
 {
-    float hp;
+    public float hp;
     public float maxHp = 100f;
 
     void Start()
