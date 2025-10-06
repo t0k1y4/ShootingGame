@@ -11,13 +11,13 @@ public class ShopManager : MonoBehaviour
     [SerializeField] private List<WeaponData> allWeapons = new List<WeaponData>();
 
     // ショップに並ぶ武器のデータ
-    [SerializeField] private List<WeaponData> availableWeapons = new List<WeaponData>();
+    public List<WeaponData> availableWeapons = new List<WeaponData>();
 
     // ショップに並べる武器の数
     [SerializeField] private int numberOfItemsInShop = 4;
 
     // ショップUIのルートオブジェクト
-    [SerializeField] private GameObject shopUI;
+    [SerializeField] private ShopUI shopUI;
 
     // --- ここまで追加 ---
 
@@ -55,7 +55,7 @@ public class ShopManager : MonoBehaviour
         }
 
         // ここでUIを更新する処理を呼び出す
-        UpdateShopUI();
+        shopUI.UpdateShopUI();
     }
 
     // UIを更新するメソッド（UIスクリプトに任せることも多い）

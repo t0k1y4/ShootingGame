@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a20f4d3af1011f49830975a0992b0f7, type: 3}
-  m_Name: Bow
+  m_Name: Rifle
   m_EditorClassIdentifier: 
-  weaponName: Bow
-  attackPower: 2
-  icon: {fileID: 0}
-  price: 15
+  weaponName: Riful
+  attackPower: 3
+  icon: {fileID: 21300000, guid: d5314cf0daaf521479bf3e0d298f4a56, type: 3}
+  price: 20
   text: default
   rate: 1
