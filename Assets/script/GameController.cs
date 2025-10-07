@@ -15,6 +15,11 @@ public class GameController : MonoBehaviour
     public TextMeshProUGUI difficaltyText;
     public TextMeshProUGUI wallHpText;
 
+    void Awake()
+    {
+        PlayerStats.Instance.ResetData();
+    }
+
     void Start()
     {
         wallScript = wall.GetComponent<Wall>();

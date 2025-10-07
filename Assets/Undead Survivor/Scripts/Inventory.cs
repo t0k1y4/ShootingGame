@@ -7,6 +7,28 @@ public class Inventory : MonoBehaviour
     // インベントリUIのアイコンImageの配列
     [SerializeField] private Image[] itemIcons;
 
+        void OnEnable()
+    {
+        // PlayerStatsの武器変更イベントを購読し、UIUpdaterを呼び出す
+        if (PlayerStats.Instance != null)
+        {
+            PlayerStats.Instance.OnWeaponsChanged += UIUpdater;
+        }
+        
+        // 初回のUI更新
+        UIUpdater();
+    }
+
+    // このGameObjectが無効になったときに呼ばれる
+    void OnDisable()
+    {
+        // PlayerStatsの武器変更イベントの購読を解除する
+        if (PlayerStats.Instance != null)
+        {
+            PlayerStats.Instance.OnWeaponsChanged -= UIUpdater;
+        }
+    }
+
     public void UIUpdater()
     {
         // Dictionaryのキー（ユニークなWeaponData）をリストに変換

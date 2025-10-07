@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 // 右クリックメニューから作成できるようにする
 [CreateAssetMenu(fileName = "Player Stats", menuName = "Game Data/Player Stats")]
@@ -10,8 +11,10 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
     public int money;
     public Dictionary<WeaponData, int> weapons = new Dictionary<WeaponData, int>();
 
+    [SerializeField] private int initialMoney = 0;
+    [SerializeField] private List<WeaponData> initialWeapons = new List<WeaponData>();
 
-
+    public event Action OnWeaponsChanged;
 
     // 所持金を増やすメソッド
     public void AddMoney(int amount)
@@ -38,6 +41,7 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
             }
             Debug.Log(newWeapon.weaponName + "をインベントリに追加しました。現在の個数: " + weapons[newWeapon]);
         }
+        OnWeaponsChanged?.Invoke();
     }
 
     public float GetWeaponPower(WeaponData weapon)
@@ -48,6 +52,17 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
     public float GetWeaponRate(WeaponData weapon)
     {
         return weapon.rate * weapons[weapon];
+    }
+
+        public void ResetData()
+    {
+        money = initialMoney;
+        weapons.Clear();
+        foreach (var weapon in initialWeapons)
+        {
+            AddWeapon(weapon);
+        }
+        Debug.Log("PlayerStatsをリセットしました。");
     }
 
 }
