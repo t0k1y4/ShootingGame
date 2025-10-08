@@ -15,10 +15,13 @@ public class ShopUI : MonoBehaviour
     [SerializeField] private Image[] itemIcons;
     [SerializeField] private Button[] buttons;
     [SerializeField] private TextMeshProUGUI money;
+    [SerializeField] private TextMeshProUGUI message;
+
 
     void OnEnable()
     {
-        money.text=PlayerStats.Instance.money + "$";
+        money.text = PlayerStats.Instance.money + "$";
+        message.text = "What do you want?";
     }
 
     // ショップUIの更新メソッド
@@ -59,28 +62,30 @@ public class ShopUI : MonoBehaviour
 
     public void Button0()
     {
-        smg.BuyWeapon(0);
-        buttons[0].interactable = false;
-        money.text=PlayerStats.Instance.money + "$";
+        Buy(0);
     }
 
     public void Button1()
     {
-        smg.BuyWeapon(1);
-        buttons[1].interactable = false;
-        money.text=PlayerStats.Instance.money + "$";
+        Buy(1);
     }
 
     public void Button2()
     {
-        smg.BuyWeapon(2);
-        buttons[2].interactable = false;
-        money.text=PlayerStats.Instance.money + "$";
+        Buy(2);
     }
     public void Button3()
     {
-        smg.BuyWeapon(3);
-        buttons[3].interactable = false;
-        money.text=PlayerStats.Instance.money + "$";
+        Buy(3);
     }
+
+    void Buy(int index)
+    {
+        if (PlayerStats.Instance.money < smg.availableWeapons[index].price) return;
+        smg.BuyWeapon(index);
+        buttons[index].interactable = false;
+        money.text = PlayerStats.Instance.money + "$";
+    }
+
+
 }

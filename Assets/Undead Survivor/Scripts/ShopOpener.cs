@@ -5,9 +5,13 @@ public class ShopOpener : MonoBehaviour
 {
     // Unityエディタから設定できるようにpublicな変数にする
     [SerializeField] private GameObject shopUI;
+    // CanvasGroupコンポーネントは不要になるため削除します
+    // [SerializeField] private CanvasGroup shopCanvasGroup;
 
     // ショップUIの現在の表示状態
     private bool isShopOpen = false;
+    // Tweenの重複実行を防止するためのフラグ
+    private bool isAnimating = false;
 
     void Start()
     {
@@ -20,8 +24,11 @@ public class ShopOpener : MonoBehaviour
 
     void Update()
     {
+        // アニメーション中は操作を受け付けない
+        if (isAnimating) return;
+
         // ユーザーが 'B' キーを押したとき
-        if (Input.GetKeyDown(KeyCode.B))//テスト用にBを押しても開くように
+        if (Input.GetKeyDown(KeyCode.B))
         {
             Shoping();
         }
@@ -29,15 +36,71 @@ public class ShopOpener : MonoBehaviour
 
     public void Shoping()
     {
-        isShopOpen = !isShopOpen;
-        shopUI.SetActive(isShopOpen);
+        isAnimating = true; // アニメーション開始
+
         if (isShopOpen)
         {
-            Time.timeScale = 0f; // ゲームを一時停止
+            // ショップを閉じる
+            CloseShopUI();
         }
         else
         {
-            Time.timeScale = 1f; // ゲームを再開
+            // ショップを開く
+            OpenShopUI();
         }
+
+        isShopOpen = !isShopOpen;
+    }
+
+    private void OpenShopUI()
+    {
+        // ショップUIをアクティブにする
+        shopUI.SetActive(true);
+        Time.timeScale = 0f; // アニメーション開始前にゲームを一時停止
+
+        // Tweenのシーケンスを作成
+        Sequence sequence = DOTween.Sequence();
+        
+        // 最初の状態をセット（奥にあるように小さく設定）
+        shopUI.transform.localScale = Vector3.zero;
+
+        // 1. 一気に大きくするアニメーション
+        sequence.Append(shopUI.transform.DOScale(1.2f, 0.3f).SetEase(Ease.OutQuad));
+
+        // 2. 少し縮小して元のサイズに戻すアニメーション
+        sequence.Append(shopUI.transform.DOScale(1f, 0.15f).SetEase(Ease.OutQuad));
+
+        // シーケンスをTimeScaleの影響を受けないようにする
+        sequence.SetUpdate(true);
+
+        // シーケンス完了後に実行する処理
+        sequence.OnComplete(() =>
+        {
+            isAnimating = false;
+        });
+    }
+
+    private void CloseShopUI()
+    {
+        // Tweenのシーケンスを作成
+        Sequence sequence = DOTween.Sequence();
+        
+        // 1. 少し縮小するアニメーション
+        sequence.Append(shopUI.transform.DOScale(1.2f, 0.15f).SetEase(Ease.OutQuad));
+
+        // 2. 奥に引っ込むように一気に小さくするアニメーション
+        sequence.Append(shopUI.transform.DOScale(0f, 0.3f).SetEase(Ease.InQuad));
+
+        // シーケンスをTimeScaleの影響を受けないようにする
+        sequence.SetUpdate(true);
+
+        // シーケンス完了後に実行する処理
+        sequence.OnComplete(() =>
+        {
+            Time.timeScale = 1f; // アニメーション完了後にゲームを再開
+            shopUI.SetActive(false);
+            isAnimating = false;
+        });
     }
 }
+
