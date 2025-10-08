@@ -65,6 +65,7 @@ public class ShopManager : MonoBehaviour
             WeaponData weaponToBuy = availableWeapons[index];
             if (PlayerStats.Instance != null && weaponToBuy != null)
             {
+                PlayerStats.Instance.UsemMoney(weaponToBuy.price);
                 PlayerStats.Instance.AddWeapon(weaponToBuy);
             }
         }
