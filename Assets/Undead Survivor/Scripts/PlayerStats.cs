@@ -116,18 +116,64 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
 
     }
 
-    // ダメージの計算・取得
-    public float GetPlayerdamage()
+    // 主人公のダメージの計算・取得
+    public float GetPlayerDamage()
     {
-        float totalDamage = 0;
-        foreach (var weapon in initialWeapons)
+        float totalDamage = 5;
+        foreach (KeyValuePair<WeaponData, int> weapon in weapons)
         {
-            if (!weapon.name.Contains("Supporter"))
+            if (!weapon.Key.name.Contains("Supporter"))
             {
-                totalDamage += GetWeaponPower(weapon);
+                Debug.Log("主人公武器ダメージ計算");
+                totalDamage += GetWeaponPower(weapon.Key);
             }
         }
+        Debug.Log("現在のダメージ：" + totalDamage);
         return totalDamage;
+    }
+
+    // 仲間のダメージの計算・取得
+    public float GetSupporterDamage(int number)
+    {
+        float totalDamage = 5;
+        switch (number)
+        {
+            case 1:
+                foreach (KeyValuePair<WeaponData, int> weapon in weapons)
+                {
+                    if (weapon.Key.name.Contains("Supporter1"))
+                    {
+                        Debug.Log("１武器ダメージ計算");
+                        totalDamage += GetWeaponPower(weapon.Key);
+                    }
+                }
+                return totalDamage;
+
+            case 2:
+                foreach (KeyValuePair<WeaponData, int> weapon in weapons)
+                {
+                    if (weapon.Key.name.Contains("Supporter2"))
+                    {
+                        Debug.Log("２武器ダメージ計算");
+                        totalDamage += GetWeaponPower(weapon.Key);
+                    }
+                }
+                return totalDamage;
+
+            case 3:
+                foreach (KeyValuePair<WeaponData, int> weapon in weapons)
+                {
+                    if (weapon.Key.name.Contains("Supporter3"))
+                    {
+                        Debug.Log("３武器ダメージ計算");
+                        totalDamage += GetWeaponPower(weapon.Key);
+                    }
+                }
+                return totalDamage;
+
+            default:
+                return 0;
+        }
     }
 
 }

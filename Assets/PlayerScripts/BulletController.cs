@@ -13,6 +13,7 @@ public class BulletController : MonoBehaviour
             te = other.collider.GetComponent<Enemy>();
             if (te != null)
             {
+                Debug.Log(damage + ":ダメージ与えた");
                 te.Damage(damage);
             }
         }
