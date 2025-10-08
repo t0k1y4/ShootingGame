@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BulletShooter : MonoBehaviour
 {
-    public AudioSource shotSound;          //打つ時の音
+    AudioSource shotSound;          //打つ時の音
     public string targetTag = "Enemy";     // ターゲットのタグ名
     public GameObject bulletPrefab;         // 弾のPrefab
     public float bulletSpeed = 10f;         // 弾速（固定）
