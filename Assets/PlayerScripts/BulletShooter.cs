@@ -6,13 +6,17 @@ public class BulletShooter : MonoBehaviour
     public string targetTag = "Enemy";     // ターゲットのタグ名
     public GameObject bulletPrefab;         // 弾のPrefab
     public float bulletSpeed = 10f;         // 弾速（固定）
+    public float rate = 1f;
+    GameObject bulletController;
+    BulletController bulletScripts;
 
     private GameObject[] targets;
 
     void Awake()
     {
-        InvokeRepeating("ShootClosestTarget", 1f, 1f);
+        InvokeRepeating("ShootClosestTarget", 1f, rate);
         shotSound = GetComponent<AudioSource>();       //打つ時の音
+        bulletScripts = bulletPrefab.GetComponent<BulletController>();
     }
 
     void ShootClosestTarget()
@@ -42,6 +46,29 @@ public class BulletShooter : MonoBehaviour
 
     void Shoot(GameObject targetObj)
     {
+        if (bulletPrefab == null)
+        {
+            Debug.Log("null");
+            return;
+        }
+        else if (bulletPrefab.name.Equals("HeroBullet"))
+        {
+            bulletScripts.damage = PlayerStats.Instance.GetPlayerDamage();
+
+        }
+        else if (bulletPrefab.name.Equals("SupporterBullet1"))
+        {
+            bulletScripts.damage = PlayerStats.Instance.GetSupporterDamage(1);
+        }
+        else if (bulletPrefab.name.Equals("SupporterBullet2"))
+        {
+            bulletScripts.damage = PlayerStats.Instance.GetSupporterDamage(2);
+        }
+        else if (bulletPrefab.name.Equals("SupporterBullet3"))
+        {
+            bulletScripts.damage = PlayerStats.Instance.GetSupporterDamage(3);
+        }
+
         Rigidbody2D targetRb = targetObj.GetComponent<Rigidbody2D>();
         if (targetRb == null) return;
 
