@@ -16,8 +16,10 @@ public class ShopUI : MonoBehaviour
     [SerializeField] private Button[] buttons;
     [SerializeField] private TextMeshProUGUI money;
     [SerializeField] private TextMeshProUGUI message;
+    [SerializeField] private TextMeshProUGUI refPrice;
 
 
+    [SerializeField] private int refleshPrice=5;
     void OnEnable()
     {
         money.text = PlayerStats.Instance.money + "$";
@@ -39,7 +41,8 @@ public class ShopUI : MonoBehaviour
             // availableWeaponsのインデックスが配列の範囲内かチェック
             if (i < smg.availableWeapons.Count)
             {
-                itemNames[i].text = smg.availableWeapons[i].weaponName;
+                itemNames[i].text = smg.availableWeapons[i].weaponName + "\n$" +
+                                    smg.availableWeapons[i].price;
                 itemIcons[i].sprite = smg.availableWeapons[i].icon;
                 buttons[i].interactable = true;
             }
@@ -52,10 +55,21 @@ public class ShopUI : MonoBehaviour
             }
         }
         money.text = PlayerStats.Instance.money + "$";
+        refPrice.text = "Reload" + "\n$" + refleshPrice;
     }
 
     public void RefleshShop()
     {
+        if (PlayerStats.Instance.money < refleshPrice) return;
+        PlayerStats.Instance.money -= refleshPrice;
+        refleshPrice +=(int)refleshPrice/2;
+        smg.RefreshShopItems();
+        UpdateShopUI();
+    }
+
+    public void BonusShop()
+    {
+        refleshPrice = 5;
         smg.RefreshShopItems();
         UpdateShopUI();
     }
@@ -84,7 +98,7 @@ public class ShopUI : MonoBehaviour
         if (PlayerStats.Instance.money < smg.availableWeapons[index].price) return;
         smg.BuyWeapon(index);
         buttons[index].interactable = false;
-        money.text = PlayerStats.Instance.money + "$";
+        money.text = "$" + PlayerStats.Instance.money;
     }
 
 

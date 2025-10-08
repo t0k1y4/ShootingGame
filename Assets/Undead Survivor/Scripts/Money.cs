@@ -4,11 +4,10 @@ using UnityEngine;
 public class Money : MonoBehaviour
 {
 
-    TextMeshProUGUI uiText;
+   public TextMeshProUGUI uiText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        uiText = GetComponent<TextMeshProUGUI>();
         UIUpdater();
     }
 
@@ -32,7 +31,7 @@ public class Money : MonoBehaviour
 
     public void UIUpdater()
     {
-        this.uiText.text = PlayerStats.Instance.money + "$";
+        this.uiText.text = "$"+PlayerStats.Instance.money;
     }
 
 }

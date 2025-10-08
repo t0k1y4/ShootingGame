@@ -5,8 +5,6 @@ public class ShopOpener : MonoBehaviour
 {
     // Unityエディタから設定できるようにpublicな変数にする
     [SerializeField] private GameObject shopUI;
-    // CanvasGroupコンポーネントは不要になるため削除します
-    // [SerializeField] private CanvasGroup shopCanvasGroup;
 
     // ショップUIの現在の表示状態
     private bool isShopOpen = false;
