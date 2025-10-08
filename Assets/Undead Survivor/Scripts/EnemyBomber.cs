@@ -48,7 +48,7 @@ public class EnemyBomber : MonoBehaviour
         {
             // 壁にぶつかったら速度を0に
             rb.linearVelocity = Vector2.zero;
-            GetComponent<Animator>().SetBool("a", true);
+            //GetComponent<Animator>().SetBool("a", true);
         }
     }
 

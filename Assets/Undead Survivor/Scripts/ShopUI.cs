@@ -13,6 +13,13 @@ public class ShopUI : MonoBehaviour
     // Inspectorで直接紐づけする
     [SerializeField] private TextMeshProUGUI[] itemNames;
     [SerializeField] private Image[] itemIcons;
+    [SerializeField] private Button[] buttons;
+    [SerializeField] private TextMeshProUGUI money;
+
+    void OnEnable()
+    {
+        money.text=PlayerStats.Instance.money + "$";
+    }
 
     // ショップUIの更新メソッド
     public void UpdateShopUI()
@@ -31,14 +38,17 @@ public class ShopUI : MonoBehaviour
             {
                 itemNames[i].text = smg.availableWeapons[i].weaponName;
                 itemIcons[i].sprite = smg.availableWeapons[i].icon;
+                buttons[i].interactable = true;
             }
             else
             {
                 // データがないスロットは非表示にするなどの処理
                 itemNames[i].text = "";
                 itemIcons[i].sprite = null;
+                buttons[i].interactable = false;
             }
         }
+        money.text = PlayerStats.Instance.money + "$";
     }
 
     public void RefleshShop()
@@ -50,20 +60,27 @@ public class ShopUI : MonoBehaviour
     public void Button0()
     {
         smg.BuyWeapon(0);
-
+        buttons[0].interactable = false;
+        money.text=PlayerStats.Instance.money + "$";
     }
 
     public void Button1()
     {
         smg.BuyWeapon(1);
+        buttons[1].interactable = false;
+        money.text=PlayerStats.Instance.money + "$";
     }
 
     public void Button2()
     {
         smg.BuyWeapon(2);
+        buttons[2].interactable = false;
+        money.text=PlayerStats.Instance.money + "$";
     }
     public void Button3()
     {
         smg.BuyWeapon(3);
+        buttons[3].interactable = false;
+        money.text=PlayerStats.Instance.money + "$";
     }
 }

@@ -34,13 +34,9 @@ public class ShopOpener : MonoBehaviour
         if (isShopOpen)
         {
             Time.timeScale = 0f; // ゲームを一時停止
-            shopUI.transform.DOScale(1.1f, 0.2f);
-            shopUI.transform.DOScale(1.0f, 0.3f);
         }
         else
         {
-            shopUI.transform.DOScale(1.1f, 0.3f);
-            shopUI.transform.DOScale(1.0f, 0.2f);
             Time.timeScale = 1f; // ゲームを再開
         }
     }

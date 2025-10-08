@@ -58,7 +58,7 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
         return weapon.rate * weapons[weapon];
     }
 
-        public void ResetData()
+    public void ResetData()
     {
         money = initialMoney;
         weapons.Clear();
@@ -69,5 +69,7 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
         OnMoneyChanged?.Invoke();
         Debug.Log("PlayerStatsをリセットしました。");
     }
+    
+
 
 }
