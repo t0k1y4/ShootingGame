@@ -5,8 +5,8 @@ public class ShopOpener : MonoBehaviour
 {
     // Unityエディタから設定できるようにpublicな変数にする
     [SerializeField] private GameObject shopUI;
-    // ショップUIのルートオブジェクトにCanvasGroupコンポーネントを追加してください
-    [SerializeField] private CanvasGroup shopCanvasGroup;
+    // CanvasGroupコンポーネントは不要になるため削除します
+    // [SerializeField] private CanvasGroup shopCanvasGroup;
 
     // ショップUIの現在の表示状態
     private bool isShopOpen = false;
@@ -18,8 +18,6 @@ public class ShopOpener : MonoBehaviour
         // ゲーム開始時はショップUIを非表示にしておく
         if (shopUI != null)
         {
-            // CanvasGroupのalphaを0に設定
-            shopCanvasGroup.alpha = 0f;
             shopUI.SetActive(false);
         }
     }
@@ -58,25 +56,26 @@ public class ShopOpener : MonoBehaviour
     {
         // ショップUIをアクティブにする
         shopUI.SetActive(true);
+        Time.timeScale = 0f; // アニメーション開始前にゲームを一時停止
 
         // Tweenのシーケンスを作成
         Sequence sequence = DOTween.Sequence();
         
-        // 最初にUIを少し縮小させるアニメーション
-        shopUI.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
-        sequence.Append(shopUI.transform.DOScale(1.1f, 0.2f).SetEase(Ease.OutBack));
+        // 最初の状態をセット（奥にあるように小さく設定）
+        shopUI.transform.localScale = Vector3.zero;
 
-        // 次に、元のスケールに戻すアニメーション
+        // 1. 一気に大きくするアニメーション
+        sequence.Append(shopUI.transform.DOScale(1.2f, 0.3f).SetEase(Ease.OutQuad));
+
+        // 2. 少し縮小して元のサイズに戻すアニメーション
         sequence.Append(shopUI.transform.DOScale(1f, 0.15f).SetEase(Ease.OutQuad));
 
-        // CanvasGroupのalphaを0から1に変化させる（フェードイン）アニメーション
-        // 同時に動かしたいのでJoin()を使う
-        sequence.Join(shopCanvasGroup.DOFade(1f, 0.3f));
+        // シーケンスをTimeScaleの影響を受けないようにする
+        sequence.SetUpdate(true);
 
         // シーケンス完了後に実行する処理
         sequence.OnComplete(() =>
         {
-            Time.timeScale = 0f; // アニメーション完了後にゲームを一時停止
             isAnimating = false;
         });
     }
@@ -86,12 +85,14 @@ public class ShopOpener : MonoBehaviour
         // Tweenのシーケンスを作成
         Sequence sequence = DOTween.Sequence();
         
-        // UIを少し縮小させるアニメーション
-        sequence.Append(shopUI.transform.DOScale(0.8f, 0.2f).SetEase(Ease.InBack));
+        // 1. 少し縮小するアニメーション
+        sequence.Append(shopUI.transform.DOScale(1.2f, 0.15f).SetEase(Ease.OutQuad));
 
-        // CanvasGroupのalphaを1から0に変化させる（フェードアウト）アニメーション
-        // 同時に動かしたいのでJoin()を使う
-        sequence.Join(shopCanvasGroup.DOFade(0f, 0.2f));
+        // 2. 奥に引っ込むように一気に小さくするアニメーション
+        sequence.Append(shopUI.transform.DOScale(0f, 0.3f).SetEase(Ease.InQuad));
+
+        // シーケンスをTimeScaleの影響を受けないようにする
+        sequence.SetUpdate(true);
 
         // シーケンス完了後に実行する処理
         sequence.OnComplete(() =>
@@ -102,3 +103,4 @@ public class ShopOpener : MonoBehaviour
         });
     }
 }
+
