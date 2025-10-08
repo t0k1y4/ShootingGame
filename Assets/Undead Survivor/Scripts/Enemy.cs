@@ -49,6 +49,7 @@ public class Enemy : MonoBehaviour
         //deadSound.Play();
         if (hp <= 0)
         {
+            PlayerStats.Instance.AddMoney(1*(int)difficalty);
             gameController.KilledCount();
             //敵が死んだらサウンドを再生
             AudioSource.PlayClipAtPoint(deadSound.clip, transform.position);

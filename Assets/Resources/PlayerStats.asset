@@ -9,12 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a20f4d3af1011f49830975a0992b0f7, type: 3}
-  m_Name: Shotgun
+  m_Script: {fileID: 11500000, guid: 16d4e28e7a5b8364cb3e1110340a1927, type: 3}
+  m_Name: PlayerStats
   m_EditorClassIdentifier: 
-  weaponName: Shotgun
-  attackPower: 3
-  icon: {fileID: 1772703093, guid: 0d5e657ee5a074e4baa53d5b248a01d2, type: 3}
-  price: 20
-  text: default
-  rate: 1
+  money: 0
+  playerInventory: {fileID: 0}

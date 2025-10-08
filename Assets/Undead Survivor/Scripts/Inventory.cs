@@ -4,60 +4,35 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    // 武器の種類と個数を管理するDictionary
-    public Dictionary<WeaponData, int> weapons = new Dictionary<WeaponData, int>();
-
-    GameObject sup1;
-    GameObject sup2;
-    GameObject sup3;
-
     // インベントリUIのアイコンImageの配列
     [SerializeField] private Image[] itemIcons;
-    // アイテムの個数を表示するテキストの配列
-    //[SerializeField] private Text[] itemCounts;
 
-    // 武器を追加するメソッド
-    public void AddWeapon(WeaponData newWeapon)
+        void OnEnable()
     {
-        if (newWeapon != null)
+        // PlayerStatsの武器変更イベントを購読し、UIUpdaterを呼び出す
+        if (PlayerStats.Instance != null)
         {
-            if (weapons.ContainsKey(newWeapon))
-            {
-                weapons[newWeapon]++; // すでに持っているなら個数を増やす
-            }
-            else
-            {
-                weapons.Add(newWeapon, 1); // 持っていなければ追加する
-            }
-            Debug.Log(newWeapon.weaponName + "をインベントリに追加しました。現在の個数: " + weapons[newWeapon]);
+            PlayerStats.Instance.OnWeaponsChanged += UIUpdater;
         }
-        UIUpdater();
-
-        if (newWeapon.weaponName == "Supporter1")
-        {
-            sup1 = GameObject.Find("Supporter1");
-            sup1.SetActive(true);
-        }
-    }
-
-    // 武器を削除するメソッド（必要に応じて実装）
-    public void RemoveWeapon(WeaponData weaponToRemove)
-    {
-        if (weaponToRemove != null && weapons.ContainsKey(weaponToRemove))
-        {
-            weapons[weaponToRemove]--;
-            if (weapons[weaponToRemove] <= 0)
-            {
-                weapons.Remove(weaponToRemove);
-            }
-        }
+        
+        // 初回のUI更新
         UIUpdater();
     }
 
-    void UIUpdater()
+    // このGameObjectが無効になったときに呼ばれる
+    void OnDisable()
+    {
+        // PlayerStatsの武器変更イベントの購読を解除する
+        if (PlayerStats.Instance != null)
+        {
+            PlayerStats.Instance.OnWeaponsChanged -= UIUpdater;
+        }
+    }
+
+    public void UIUpdater()
     {
         // Dictionaryのキー（ユニークなWeaponData）をリストに変換
-        List<WeaponData> uniqueWeapons = new List<WeaponData>(weapons.Keys);
+        List<WeaponData> uniqueWeapons = new List<WeaponData>(PlayerStats.Instance.weapons.Keys);
 
         // UIスロットを更新
         for (int i = 0; i < itemIcons.Length; i++)
