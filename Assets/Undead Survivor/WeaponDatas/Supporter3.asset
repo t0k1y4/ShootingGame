@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a20f4d3af1011f49830975a0992b0f7, type: 3}
   m_Name: Supporter3
   m_EditorClassIdentifier: 
-  weaponName: Supporter3
+  weaponName: InSupporter3
   attackPower: 1
   icon: {fileID: 938132271, guid: 57a1443e67528144aa07582927559650, type: 3}
   price: 20
