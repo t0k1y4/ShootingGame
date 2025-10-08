@@ -6,12 +6,13 @@ public class BulletShooter : MonoBehaviour
     public string targetTag = "Enemy";     // ターゲットのタグ名
     public GameObject bulletPrefab;         // 弾のPrefab
     public float bulletSpeed = 10f;         // 弾速（固定）
+    public float rate = 1f;
 
     private GameObject[] targets;
 
     void Awake()
     {
-        InvokeRepeating("ShootClosestTarget", 1f, 1f);
+        InvokeRepeating("ShootClosestTarget", 3f, rate);
         shotSound = GetComponent<AudioSource>();       //打つ時の音
     }
 

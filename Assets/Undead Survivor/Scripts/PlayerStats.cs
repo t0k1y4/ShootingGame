@@ -95,8 +95,6 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
         OnMoneyChanged?.Invoke();
         Debug.Log("PlayerStatsをリセットしました。");
     }
-    
-
 
     // 仲間のアクティブ状態を取得
     public bool GetSupporter(int number)
@@ -116,6 +114,20 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
                 return false;
         }
 
+    }
+
+    // ダメージの計算・取得
+    public float GetPlayerdamage()
+    {
+        float totalDamage = 0;
+        foreach (var weapon in initialWeapons)
+        {
+            if (!weapon.name.Contains("Supporter"))
+            {
+                totalDamage += GetWeaponPower(weapon);
+            }
+        }
+        return totalDamage;
     }
 
 }
