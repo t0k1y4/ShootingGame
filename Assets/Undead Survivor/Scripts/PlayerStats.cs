@@ -15,17 +15,21 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
     [SerializeField] private List<WeaponData> initialWeapons = new List<WeaponData>();
 
     public event Action OnWeaponsChanged;
+    public event Action OnMoneyChanged;
 
     // 所持金を増やすメソッド
     public void AddMoney(int amount)
     {
         money += amount;
+        OnMoneyChanged?.Invoke();
     }
 
     public void UsemMoney(int amount)
     {
         money -= amount;
+        OnMoneyChanged?.Invoke();
     }
+
 
     public void AddWeapon(WeaponData newWeapon)
     {
@@ -62,6 +66,7 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
         {
             AddWeapon(weapon);
         }
+        OnMoneyChanged?.Invoke();
         Debug.Log("PlayerStatsをリセットしました。");
     }
 

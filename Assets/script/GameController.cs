@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour
     public TextMeshProUGUI difficaltyText;
     public TextMeshProUGUI wallHpText;
 
-    void Awake()
+    void OnEnable()
     {
         PlayerStats.Instance.ResetData();
     }
