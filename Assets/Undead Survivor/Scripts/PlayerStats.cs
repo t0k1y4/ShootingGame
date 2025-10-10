@@ -17,6 +17,9 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
     public event Action OnWeaponsChanged;
     public event Action OnMoneyChanged;
 
+    public float diameterRate = 0.05f;
+    public float diameterSupRate = 0.03f;
+
     // 仲間のアクティブ状態
     bool supporter1 = false;
     bool supporter2 = false;
@@ -122,7 +125,7 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
         float totalDamage = 5;
         foreach (KeyValuePair<WeaponData, int> weapon in weapons)
         {
-            if (!weapon.Key.name.Contains("Supporter"))
+            if (weapon.Key.name.Contains("DamageUp"))
             {
                 Debug.Log("主人公武器ダメージ計算");
                 totalDamage += GetWeaponPower(weapon.Key);
@@ -130,6 +133,21 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
         }
         Debug.Log("現在のダメージ：" + totalDamage);
         return totalDamage;
+    }
+
+    public float GetPlayerRate(float defaultRate)
+    {
+        float rate = 0;
+        foreach (KeyValuePair<WeaponData, int> weapon in weapons)
+        {
+            if (weapon.Key.name.Contains("RateUp"))
+            {
+                Debug.Log("主人公発射レート計算");
+                rate = defaultRate / (diameterRate * GetWeaponRate(weapon.Key) + 1f);
+            }
+        }
+        Debug.Log("現在のレート：" + rate);
+        return rate;
     }
 
     // 仲間のダメージの計算・取得
@@ -170,6 +188,48 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
                     }
                 }
                 return totalDamage;
+
+            default:
+                return 0;
+        }
+    }
+    public float GetSupporterRate(int number, float defaultRate)
+    {
+        float rate = 1f;
+        switch (number)
+        {
+            case 1:
+                foreach (KeyValuePair<WeaponData, int> weapon in weapons)
+                {
+                    if (weapon.Key.name.Contains("Supporter1"))
+                    {
+                        Debug.Log("１発射レート計算");
+                        rate = defaultRate / (diameterRate * GetWeaponRate(weapon.Key) + 1f);
+                    }
+                }
+                return rate;
+
+            case 2:
+                foreach (KeyValuePair<WeaponData, int> weapon in weapons)
+                {
+                    if (weapon.Key.name.Contains("Supporter2"))
+                    {
+                        Debug.Log("２発射レート計算");
+                        rate = defaultRate / (diameterRate * GetWeaponRate(weapon.Key) + 1f);
+                    }
+                }
+                return rate;
+
+            case 3:
+                foreach (KeyValuePair<WeaponData, int> weapon in weapons)
+                {
+                    if (weapon.Key.name.Contains("Supporter3"))
+                    {
+                        Debug.Log("３発射レート計算");
+                        rate = defaultRate / (diameterRate * GetWeaponRate(weapon.Key) + 1f);
+                    }
+                }
+                return rate;
 
             default:
                 return 0;

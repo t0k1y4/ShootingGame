@@ -7,7 +7,7 @@ public class BulletShooter : MonoBehaviour
     public GameObject bulletPrefab;         // 弾のPrefab
     public float bulletSpeed = 10f;         // 弾速（固定）
     public float time = 0;
-    public float maxRate = 1f;
+    public float defaultRate = 1f;
     public float rate = 1f;
     public float a = 0.1f;
     GameObject bulletController;
@@ -17,13 +17,18 @@ public class BulletShooter : MonoBehaviour
 
     void Awake()
     {
-        rate = maxRate;
+        rate = defaultRate;
         shotSound = GetComponent<AudioSource>();       //打つ時の音
         bulletScripts = bulletPrefab.GetComponent<BulletController>();
     }
 
     void Update()
     {
+        if (Time.deltaTime == 0)
+        {
+            ChangeStatus();
+        }
+
         time += Time.deltaTime;
         if (time > rate)
         {
@@ -59,29 +64,6 @@ public class BulletShooter : MonoBehaviour
 
     void Shoot(GameObject targetObj)
     {
-        if (bulletPrefab == null)
-        {
-            Debug.Log("null");
-            return;
-        }
-        else if (bulletPrefab.name.Equals("HeroBullet"))
-        {
-            bulletScripts.damage = PlayerStats.Instance.GetPlayerDamage();
-
-        }
-        else if (bulletPrefab.name.Equals("SupporterBullet1"))
-        {
-            bulletScripts.damage = PlayerStats.Instance.GetSupporterDamage(1);
-        }
-        else if (bulletPrefab.name.Equals("SupporterBullet2"))
-        {
-            bulletScripts.damage = PlayerStats.Instance.GetSupporterDamage(2);
-        }
-        else if (bulletPrefab.name.Equals("SupporterBullet3"))
-        {
-            bulletScripts.damage = PlayerStats.Instance.GetSupporterDamage(3);
-        }
-
         Rigidbody2D targetRb = targetObj.GetComponent<Rigidbody2D>();
         if (targetRb == null) return;
 
@@ -119,8 +101,32 @@ public class BulletShooter : MonoBehaviour
         Debug.Log($"最も近いターゲット {targetObj.name} に弾を発射しました");
     }
 
-    public void ChangeRate(int x)
+    public void ChangeStatus()
     {
-        rate = maxRate / (a * x + 1f);
+        if (bulletPrefab == null)
+        {
+            Debug.Log("null");
+            return;
+        }
+        else if (bulletPrefab.name.Equals("HeroBullet"))
+        {
+            bulletScripts.damage = PlayerStats.Instance.GetPlayerDamage();
+            rate = PlayerStats.Instance.GetPlayerRate(defaultRate);
+        }
+        else if (bulletPrefab.name.Equals("SupporterBullet1"))
+        {
+            bulletScripts.damage = PlayerStats.Instance.GetSupporterDamage(1);
+            rate = PlayerStats.Instance.GetSupporterRate(1, defaultRate);
+        }
+        else if (bulletPrefab.name.Equals("SupporterBullet2"))
+        {
+            bulletScripts.damage = PlayerStats.Instance.GetSupporterDamage(2);
+            rate = PlayerStats.Instance.GetSupporterRate(2, defaultRate);
+        }
+        else if (bulletPrefab.name.Equals("SupporterBullet3"))
+        {
+            bulletScripts.damage = PlayerStats.Instance.GetSupporterDamage(3);
+            rate = PlayerStats.Instance.GetSupporterRate(3, defaultRate);
+        }
     }
 }
