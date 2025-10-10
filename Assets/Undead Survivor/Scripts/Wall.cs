@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Wall : MonoBehaviour
@@ -6,6 +7,7 @@ public class Wall : MonoBehaviour
     AudioSource destroySound;    //バリケード崩壊音
     public float WallHp { get; private set; }
     public float WallMaxHp { get; private set; }
+    public event Action OnWallHpChanged;
 
 
     private void Awake()
@@ -24,6 +26,7 @@ public class Wall : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        OnWallHpChanged?.Invoke();
     }
 
     public void WallDamage(float damage)
@@ -32,6 +35,7 @@ public class Wall : MonoBehaviour
         Debug.Log(WallHp);
         WallHp -= damage;
         Debug.Log(WallHp);
+        OnWallHpChanged?.Invoke();
         if (WallHp <= 0)
         {
             //バリケードが壊れたらサウンドを再生
@@ -47,6 +51,7 @@ public class Wall : MonoBehaviour
     {
         WallMaxHp += maxUp;
         WallHp += maxUp;
+        OnWallHpChanged?.Invoke();
     }
 
     //最大値を増やすときに乗算にできるオーバーロード
@@ -56,6 +61,7 @@ public class Wall : MonoBehaviour
         {
             WallMaxHp *= maxUp;
             WallHp *= maxUp;
+            OnWallHpChanged?.Invoke();
         }
         else wallCustom(maxUp);
     }
@@ -65,6 +71,7 @@ public class Wall : MonoBehaviour
     {
         WallHp += heal;
         WallHp = Mathf.Min(WallHp, WallMaxHp);
+        OnWallHpChanged?.Invoke();
     }
 }
 

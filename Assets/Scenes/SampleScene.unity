@@ -1340,7 +1340,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1157931502724483756, guid: 513cd0a80c4fae04099df8e46ebe2df5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2906765644317471935, guid: 513cd0a80c4fae04099df8e46ebe2df5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9817,7 +9817,7 @@ PrefabInstance:
     - target: {fileID: 5750381159659899577, guid: 07545470b28f0214a9f9f6144aa853b4, type: 3}
       propertyPath: eg
       value: 
-      objectReference: {fileID: 1648981738}
+      objectReference: {fileID: 1648981739}
     - target: {fileID: 5750381159659899577, guid: 07545470b28f0214a9f9f6144aa853b4, type: 3}
       propertyPath: diff
       value: 5
@@ -9831,6 +9831,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5750381159659899577, guid: 07545470b28f0214a9f9f6144aa853b4, type: 3}
+      propertyPath: egScript
+      value: 
+      objectReference: {fileID: 1648981739}
+    - target: {fileID: 5750381159659899577, guid: 07545470b28f0214a9f9f6144aa853b4, type: 3}
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 0}
@@ -9839,9 +9843,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1494540682}
     - target: {fileID: 5750381159659899577, guid: 07545470b28f0214a9f9f6144aa853b4, type: 3}
+      propertyPath: shopOpener
+      value: 
+      objectReference: {fileID: 361340542}
+    - target: {fileID: 5750381159659899577, guid: 07545470b28f0214a9f9f6144aa853b4, type: 3}
       propertyPath: wallHpText
       value: 
       objectReference: {fileID: 197952916}
+    - target: {fileID: 5750381159659899577, guid: 07545470b28f0214a9f9f6144aa853b4, type: 3}
+      propertyPath: shopManager
+      value: 
+      objectReference: {fileID: 361340541}
     - target: {fileID: 5750381159659899577, guid: 07545470b28f0214a9f9f6144aa853b4, type: 3}
       propertyPath: difficaltyText
       value: 
@@ -9856,9 +9868,9 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 619394802}
+  - {fileID: 1003736485}
   - {fileID: 4681913869199732150}
   - {fileID: 1694237636}
-  - {fileID: 1003736485}
   - {fileID: 381778925}
   - {fileID: 1648981740}
   - {fileID: 2043480493}

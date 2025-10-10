@@ -7,37 +7,48 @@ public class GameController : MonoBehaviour
     int difficalty = 0;     // 難易度
     public int diff = 10;   // 難易度の上昇量
 
-    public GameObject wall;
-    Wall wallScript;
-    public GameObject eg;
-    EnemyGenerator egScript;
+    public EnemyGenerator eg;
     public TextMeshProUGUI killedText;
     public TextMeshProUGUI difficaltyText;
     public TextMeshProUGUI wallHpText;
+    public ShopManager shopManager;
+    public ShopOpener shopOpener;
 
     void OnEnable()
     {
         PlayerStats.Instance.ResetData();
     }
+    void OnDisable()
+    {
+        // PlayerStatsの武器変更イベントの購読を解除する
+        if (Wall.Instance != null)
+        {
+            Wall.Instance.OnWallHpChanged -= UIUpdater;
+        }
+    }
 
     void Start()
     {
-        wallScript = wall.GetComponent<Wall>();
-        egScript = eg.GetComponent<EnemyGenerator>();
+        // WallHpChangedイベントを購読し、UIUpdaterを呼び出す
+        if (Wall.Instance != null)
+        {
+            Wall.Instance.OnWallHpChanged += UIUpdater;
+        }
+        // 初回のUI更新
+        UIUpdater();
+
     }
 
     void Update()
     {
-        // テキストの更新
-        killedText.text = killed + ":killed !";
-        difficaltyText.text = "difficalty:" + difficalty;
-        wallHpText.text = "HP : " + wallScript.WallHp;
+
     }
 
     public void KilledCount()
     {
         // 敵を倒したときにスコアを加算
         killed += 1;
+        killedText.text = killed + ":killed !";
         Difficalty();
     }
 
@@ -47,8 +58,26 @@ public class GameController : MonoBehaviour
         if (killed % diff == 0)
         {
             difficalty += 1;
-            egScript.ChangeGenTime(difficalty);
+            difficaltyText.text = "difficalty:" + difficalty;
+            eg.ChangeGenTime(difficalty);
+            if (difficalty % 2 == 0)
+            {
+                BonusShop();
+            }
         }
+
     }
-    
+
+    public void BonusShop()
+    {
+        shopManager.RefreshShopItems();
+        shopOpener.Shoping();
+    }
+
+    public void UIUpdater()
+    {
+        wallHpText.text = "HP : " + Wall.Instance.WallHp;
+    }
+
+
 }

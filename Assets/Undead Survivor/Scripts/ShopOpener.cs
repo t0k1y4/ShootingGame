@@ -24,12 +24,6 @@ public class ShopOpener : MonoBehaviour
     {
         // アニメーション中は操作を受け付けない
         if (isAnimating) return;
-
-        // ユーザーが 'B' キーを押したとき
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            Shoping();
-        }
     }
 
     public void Shoping()
