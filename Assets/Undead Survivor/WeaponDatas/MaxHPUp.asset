@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a20f4d3af1011f49830975a0992b0f7, type: 3}
-  m_Name: Wand
+  m_Name: MaxHPUp
   m_EditorClassIdentifier: 
-  weaponName: Wand
-  attackPower: 1
-  icon: {fileID: 8637182175471836850, guid: cb747dd5cf6c12a49a6cb46ce1e9880d, type: 3}
-  price: 10
-  text: default
-  rate: 1
+  weaponName: MaxHPUp
+  attackPower: 0
+  icon: {fileID: 0}
+  price: 0
+  text: 
+  rate: 0
