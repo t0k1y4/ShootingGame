@@ -6,7 +6,10 @@ public class BulletShooter : MonoBehaviour
     public string targetTag = "Enemy";     // ターゲットのタグ名
     public GameObject bulletPrefab;         // 弾のPrefab
     public float bulletSpeed = 10f;         // 弾速（固定）
+    public float time = 0;
+    public float maxRate = 1f;
     public float rate = 1f;
+    public float a = 0.1f;
     GameObject bulletController;
     BulletController bulletScripts;
 
@@ -14,9 +17,19 @@ public class BulletShooter : MonoBehaviour
 
     void Awake()
     {
-        InvokeRepeating("ShootClosestTarget", 1f, rate);
+        rate = maxRate;
         shotSound = GetComponent<AudioSource>();       //打つ時の音
         bulletScripts = bulletPrefab.GetComponent<BulletController>();
+    }
+
+    void Update()
+    {
+        time += Time.deltaTime;
+        if (time > rate)
+        {
+            ShootClosestTarget();
+            time = 0;
+        }
     }
 
     void ShootClosestTarget()
@@ -104,5 +117,10 @@ public class BulletShooter : MonoBehaviour
         shotSound.Play();
 
         Debug.Log($"最も近いターゲット {targetObj.name} に弾を発射しました");
+    }
+
+    public void ChangeRate(int x)
+    {
+        rate = maxRate / (a * x + 1f);
     }
 }
