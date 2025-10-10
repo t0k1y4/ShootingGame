@@ -638,7 +638,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 0000000073c97e86
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -863,6 +863,11 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!224 &686957836 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4550558538501726791, guid: e6674a14527d5e940a8a712b02678b79, type: 3}
+  m_PrefabInstance: {fileID: 2043480493}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &687102553 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 835669233140141938, guid: 246c5489b2f715e4fb9992139a070594, type: 3}
@@ -1137,6 +1142,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d824ee8793e01864eb36c729d701cd68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &942494016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 942494017}
+  - component: {fileID: 942494019}
+  - component: {fileID: 942494018}
+  m_Layer: 5
+  m_Name: Merchant
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &942494017
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942494016}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 686957836}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 276, y: -343}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &942494018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942494016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 5188661919279481670, guid: 3b8f675c6d5d37e4b9fb9b0211390d36, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &942494019
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942494016}
+  m_CullTransparentMesh: 1
 --- !u!4 &1002786384 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 770982683678587780, guid: 464a7fe5ef1a60f48ac4f2b4536c2b1a, type: 3}
@@ -8472,12 +8552,12 @@ GameObject:
   - component: {fileID: 1861394956}
   - component: {fileID: 1861394955}
   m_Layer: 5
-  m_Name: Message
+  m_Name: MerchantMessage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1861394954
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8491,11 +8571,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 801752888}
-  m_Father: {fileID: 149276435}
+  m_Father: {fileID: 686957836}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 387.99997, y: 40}
+  m_AnchoredPosition: {x: 276, y: 34}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1861394955
@@ -8589,8 +8669,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 149276430}
     - target: {fileID: 2904815611380960620, guid: ad8c51bc3c5659e4e935197c41b3fe1e, type: 3}
+      propertyPath: traderUI
+      value: 
+      objectReference: {fileID: 942494017}
+    - target: {fileID: 2904815611380960620, guid: ad8c51bc3c5659e4e935197c41b3fe1e, type: 3}
+      propertyPath: messageUI
+      value: 
+      objectReference: {fileID: 1861394953}
+    - target: {fileID: 2904815611380960620, guid: ad8c51bc3c5659e4e935197c41b3fe1e, type: 3}
+      propertyPath: messageUIText
+      value: 
+      objectReference: {fileID: 801752886}
+    - target: {fileID: 2904815611380960620, guid: ad8c51bc3c5659e4e935197c41b3fe1e, type: 3}
       propertyPath: shopCanvasGroup
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2904815611380960620, guid: ad8c51bc3c5659e4e935197c41b3fe1e, type: 3}
+      propertyPath: traderTargetPosition.x
+      value: 276
+      objectReference: {fileID: 0}
+    - target: {fileID: 2904815611380960620, guid: ad8c51bc3c5659e4e935197c41b3fe1e, type: 3}
+      propertyPath: traderTargetPosition.y
+      value: -140
+      objectReference: {fileID: 0}
+    - target: {fileID: 2904815611380960620, guid: ad8c51bc3c5659e4e935197c41b3fe1e, type: 3}
+      propertyPath: traderInitialPosition.x
+      value: 276
+      objectReference: {fileID: 0}
+    - target: {fileID: 2904815611380960620, guid: ad8c51bc3c5659e4e935197c41b3fe1e, type: 3}
+      propertyPath: traderInitialPosition.y
+      value: -400
       objectReference: {fileID: 0}
     - target: {fileID: 3859009748940615938, guid: ad8c51bc3c5659e4e935197c41b3fe1e, type: 3}
       propertyPath: shopUI
@@ -9590,7 +9698,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 7288471694014747302, guid: e6674a14527d5e940a8a712b02678b79, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 4550558538501726791, guid: e6674a14527d5e940a8a712b02678b79, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 942494017}
+    - targetCorrespondingSourceObject: {fileID: 4550558538501726791, guid: e6674a14527d5e940a8a712b02678b79, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1861394954}
     - targetCorrespondingSourceObject: {fileID: 7288471694014747302, guid: e6674a14527d5e940a8a712b02678b79, type: 3}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a20f4d3af1011f49830975a0992b0f7, type: 3}
   m_Name: Sword
   m_EditorClassIdentifier: 
-  weaponName: Sward
+  weaponName: Sword
   attackPower: 1
   icon: {fileID: -8328820985262947484, guid: 2128148f670aa064aa7de2a0828b30f4, type: 3}
   price: 10

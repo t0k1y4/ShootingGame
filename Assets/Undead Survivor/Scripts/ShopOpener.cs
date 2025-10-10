@@ -1,10 +1,18 @@
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 
 public class ShopOpener : MonoBehaviour
 {
     // Unityエディタから設定できるようにpublicな変数にする
     [SerializeField] private GameObject shopUI;
+    [SerializeField] private RectTransform traderUI;
+    [SerializeField] private GameObject messageUI;
+    [SerializeField] private TextMeshProUGUI messageUIText;
+
+    public Vector2 traderTargetPosition;// 店員が登場する画面内の最終位置
+    public Vector2 traderInitialPosition;// 店員が表示される初期位置（画面外）
+
 
     // ショップUIの現在の表示状態
     private bool isShopOpen = false;
@@ -17,6 +25,15 @@ public class ShopOpener : MonoBehaviour
         if (shopUI != null)
         {
             shopUI.SetActive(false);
+        }
+        if (traderUI != null)
+        {
+            traderUI.gameObject.SetActive(false);
+            traderUI.anchoredPosition = traderInitialPosition; // 初期位置を設定
+        }
+        if (messageUI != null)
+        {
+            messageUI.SetActive(false);
         }
     }
 
@@ -46,29 +63,47 @@ public class ShopOpener : MonoBehaviour
 
     private void OpenShopUI()
     {
-        // ショップUIをアクティブにする
-        shopUI.SetActive(true);
-        Time.timeScale = 0f; // アニメーション開始前にゲームを一時停止
+        // まず店員を画面外から登場させるシーケンス
+        Sequence traderSequence = DOTween.Sequence();
 
-        // Tweenのシーケンスを作成
-        Sequence sequence = DOTween.Sequence();
-        
-        // 最初の状態をセット（奥にあるように小さく設定）
-        shopUI.transform.localScale = Vector3.zero;
 
-        // 1. 一気に大きくするアニメーション
-        sequence.Append(shopUI.transform.DOScale(1.2f, 0.3f).SetEase(Ease.OutQuad));
+        traderUI.gameObject.SetActive(true); // 店員UIをアクティブにする
+        traderUI.anchoredPosition = traderInitialPosition; // 念のため初期位置にセット
 
-        // 2. 少し縮小して元のサイズに戻すアニメーション
-        sequence.Append(shopUI.transform.DOScale(1f, 0.15f).SetEase(Ease.OutQuad));
+        traderSequence.Append(traderUI.DOAnchorPos(traderTargetPosition, 0.5f).SetEase(Ease.OutBack));
 
-        // シーケンスをTimeScaleの影響を受けないようにする
-        sequence.SetUpdate(true);
-
-        // シーケンス完了後に実行する処理
-        sequence.OnComplete(() =>
+        // 店員の登場が終わった後に、ショップUIを開くアニメーションを実行する
+        traderSequence.OnComplete(() =>
         {
-            isAnimating = false;
+            // ショップUIをアクティブにする
+            shopUI.SetActive(true);
+            messageUI.SetActive(true);
+            messageUIText.text = "What Do You Want?";
+            Time.timeScale = 0f; // アニメーション開始前にゲームを一時停止
+
+            // Tweenのシーケンスを作成
+            Sequence shopSequence = DOTween.Sequence();
+
+            // 最初の状態をセット（奥にあるように小さく設定）
+            shopUI.transform.localScale = Vector3.zero;
+            messageUI.transform.localScale = Vector3.zero;
+
+            // 1. 一気に大きくするアニメーション
+            shopSequence.Append(shopUI.transform.DOScale(1.2f, 0.3f).SetEase(Ease.OutQuad));
+            shopSequence.Join(messageUI.transform.DOScale(1.2f, 0.3f).SetEase(Ease.OutQuad));
+
+            // 2. 少し縮小して元のサイズに戻すアニメーション
+            shopSequence.Append(shopUI.transform.DOScale(1f, 0.15f).SetEase(Ease.OutQuad));
+            shopSequence.Join(messageUI.transform.DOScale(1f, 0.15f).SetEase(Ease.OutQuad));
+
+            // シーケンスをTimeScaleの影響を受けないようにする
+            shopSequence.SetUpdate(true);
+
+            // シーケンス完了後に実行する処理
+            shopSequence.OnComplete(() =>
+            {
+                isAnimating = false;
+            });
         });
     }
 
@@ -76,13 +111,17 @@ public class ShopOpener : MonoBehaviour
     {
         // Tweenのシーケンスを作成
         Sequence sequence = DOTween.Sequence();
-        
+        messageUIText.text = "bye~~~";
+
         // 1. 少し縮小するアニメーション
         sequence.Append(shopUI.transform.DOScale(1.2f, 0.15f).SetEase(Ease.OutQuad));
 
         // 2. 奥に引っ込むように一気に小さくするアニメーション
         sequence.Append(shopUI.transform.DOScale(0f, 0.3f).SetEase(Ease.InQuad));
-
+        sequence.Append(messageUI.transform.DOScale(1.2f, 0.15f).SetEase(Ease.OutQuad));
+        sequence.Append(messageUI.transform.DOScale(0f, 0.3f).SetEase(Ease.InQuad));
+        sequence.Join(traderUI.DOAnchorPos(traderInitialPosition, 0.5f).SetEase(Ease.InBack));
+    
         // シーケンスをTimeScaleの影響を受けないようにする
         sequence.SetUpdate(true);
 
@@ -91,8 +130,9 @@ public class ShopOpener : MonoBehaviour
         {
             Time.timeScale = 1f; // アニメーション完了後にゲームを再開
             shopUI.SetActive(false);
+            messageUI.SetActive(false);
+            traderUI.gameObject.SetActive(false); // ショップUIが消えたら店員も非表示にする
             isAnimating = false;
         });
     }
 }
-

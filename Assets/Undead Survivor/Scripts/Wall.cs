@@ -31,8 +31,8 @@ public class Wall : MonoBehaviour
     private void Awake()
     {
         //gameoverは最初非表示
-        IsRetryCanvas.SetActive(false);
-        GameOverCanvas.SetActive(false);
+        //IsRetryCanvas.SetActive(false);
+        //  GameOverCanvas.SetActive(false);
 
         //死んだ音
         destroySound = GetComponent<AudioSource>();

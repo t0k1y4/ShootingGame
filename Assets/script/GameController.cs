@@ -62,6 +62,7 @@ public class GameController : MonoBehaviour
             eg.ChangeGenTime(difficalty);
             if (difficalty % 2 == 0)
             {
+                //難易度が2の倍数になったらショップを開く
                 BonusShop();
             }
         }
@@ -70,6 +71,7 @@ public class GameController : MonoBehaviour
 
     public void BonusShop()
     {
+        PlayerStats.Instance.AddMoney(difficalty*10);//数字は適当
         shopManager.RefreshShopItems();
         shopOpener.Shoping();
     }
