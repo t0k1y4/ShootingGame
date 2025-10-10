@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a20f4d3af1011f49830975a0992b0f7, type: 3}
-  m_Name: Sword
+  m_Name: DamageUp
   m_EditorClassIdentifier: 
-  weaponName: Sword
+  weaponName: DamageUp
   attackPower: 1
-  icon: {fileID: -8328820985262947484, guid: 2128148f670aa064aa7de2a0828b30f4, type: 3}
+  icon: {fileID: 5523630204628833594, guid: 3bce742a8408eaa4d88b4e53e09ee3f6, type: 3}
   price: 10
   text: default
   rate: 1

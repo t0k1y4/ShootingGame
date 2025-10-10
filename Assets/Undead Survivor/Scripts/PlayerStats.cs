@@ -47,12 +47,23 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
             if (weapons.ContainsKey(newWeapon))
             {
                 weapons[newWeapon]++; // すでに持っているなら個数を増やす
+                Debug.Log(newWeapon.weaponName + "をインベントリに追加しました。現在の個数: " + weapons[newWeapon]);
+            }
+            else if (newWeapon.weaponName == "HPHeal")
+            {
+                Wall.Instance.WallRecover(Wall.Instance.WallMaxHp / 4);
+                Debug.Log(newWeapon.weaponName+"を使用しました。現在のHP:"+Wall.Instance.WallHp+"/"+Wall.Instance.WallMaxHp);
             }
             else
             {
                 weapons.Add(newWeapon, 1); // 持っていなければ追加する
+                if (newWeapon.weaponName == "MaxHPUp")
+                {
+                    Wall.Instance.WallCustom(1.1f, true);
+                }
+                Debug.Log(newWeapon.weaponName + "をインベントリに追加しました。現在の個数: " + weapons[newWeapon]);
             }
-            Debug.Log(newWeapon.weaponName + "をインベントリに追加しました。現在の個数: " + weapons[newWeapon]);
+
 
             // 仲間をアクティブに変更
             if (newWeapon.name.Contains("Supporter1"))
@@ -145,6 +156,10 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
                 Debug.Log("主人公発射レート計算");
                 rate = defaultRate / (diameterRate * GetWeaponRate(weapon.Key) + 1f);
             }
+            else
+            {
+                rate = defaultRate;
+            }
         }
         Debug.Log("現在のレート：" + rate);
         return rate;
@@ -236,6 +251,6 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
         }
     }
 
-    
+
 
 }

@@ -80,7 +80,7 @@ public class Wall : MonoBehaviour
     }
 
     //最大値を増やせる処理
-    public void wallCustom(float maxUp)
+    public void WallCustom(float maxUp)
     {
         WallMaxHp += maxUp;
         WallHp += maxUp;
@@ -88,7 +88,7 @@ public class Wall : MonoBehaviour
     }
 
     //最大値を増やすときに乗算にできるオーバーロード
-    public void wallCustom(float maxUp, bool multiplication)
+    public void WallCustom(float maxUp, bool multiplication)
     {
         if (multiplication)
         {
@@ -96,11 +96,11 @@ public class Wall : MonoBehaviour
             WallHp *= maxUp;
             OnWallHpChanged?.Invoke();
         }
-        else wallCustom(maxUp);
+        else WallCustom(maxUp);
     }
 
     //壁を回復するだけの処理
-    public void wallRecover(float heal)
+    public void WallRecover(float heal)
     {
         WallHp += heal;
         WallHp = Mathf.Min(WallHp, WallMaxHp);
