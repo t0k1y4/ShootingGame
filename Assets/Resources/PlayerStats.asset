@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16d4e28e7a5b8364cb3e1110340a1927, type: 3}
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
-  money: 34
+  money: 64
   initialMoney: 30
   initialWeapons:
   - {fileID: 11400000, guid: dea62a84c20389f47ad6d8a08336c0e5, type: 2}

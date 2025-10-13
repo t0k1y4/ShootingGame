@@ -176,5 +176,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTag: Enemy
-  damage: 10
-  te: {fileID: 0}
+  damage: 5
+  enemy: {fileID: 0}

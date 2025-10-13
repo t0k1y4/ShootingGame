@@ -137,6 +137,7 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
         supporter1 = false;
         supporter2 = false;
         supporter3 = false;
+        userIsAttack = false;
         foreach (var weapon in initialWeapons)
         {
             AddWeapon(weapon);

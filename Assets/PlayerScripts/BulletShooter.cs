@@ -30,6 +30,11 @@ public class BulletShooter : MonoBehaviour
         bulletScripts = bulletPrefab.GetComponent<BulletController>();
     }
 
+    void Start()
+    {
+        ChangeStatus();
+    }
+
     void Update()
     {
         if (Time.deltaTime == 0 && !timeChenge)
@@ -124,13 +129,13 @@ public class BulletShooter : MonoBehaviour
         // 主人公
         else if (bulletPrefab.name.Equals("HeroBullet"))
         {
-            bulletScripts.damage += PlayerStats.Instance.GetPlayerDamage();
+            bulletScripts.damage = PlayerStats.Instance.GetPlayerDamage();
             rate = PlayerStats.Instance.GetPlayerRate(defaultRate);
         }
         // 仲間１
         else if (bulletPrefab.name.Equals("SupporterBullet1"))
         {
-            bulletScripts.damage += PlayerStats.Instance.GetSupporterDamage(1);
+            bulletScripts.damage = PlayerStats.Instance.GetSupporterDamage(1);
             rate = PlayerStats.Instance.GetSupporterRate(1, defaultRate);
             int supCount1 = PlayerStats.Instance.GetWeaponCount("Supporter1");
             if (supCount1 >= 1 && supLevel1 >= 0)
@@ -154,7 +159,7 @@ public class BulletShooter : MonoBehaviour
         // 仲間２
         else if (bulletPrefab.name.Equals("SupporterBullet2"))
         {
-            bulletScripts.damage += PlayerStats.Instance.GetSupporterDamage(2);
+            bulletScripts.damage = PlayerStats.Instance.GetSupporterDamage(2);
             rate = PlayerStats.Instance.GetSupporterRate(2, defaultRate);
             int supCount2 = PlayerStats.Instance.GetWeaponCount("Supporter2");
             if (supCount2 >= 1 && supLevel2 >= 0)
@@ -178,7 +183,7 @@ public class BulletShooter : MonoBehaviour
         // 仲間３
         else if (bulletPrefab.name.Equals("SupporterBullet3"))
         {
-            bulletScripts.damage += PlayerStats.Instance.GetSupporterDamage(3);
+            bulletScripts.damage = PlayerStats.Instance.GetSupporterDamage(3);
             rate = PlayerStats.Instance.GetSupporterRate(3, defaultRate);
             int supCount3 = PlayerStats.Instance.GetWeaponCount("Supporter3");
             if (supCount3 >= 1 && supLevel3 >= 0)

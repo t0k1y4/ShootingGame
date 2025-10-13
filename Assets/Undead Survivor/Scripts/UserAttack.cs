@@ -11,7 +11,6 @@ public class AttackTrigger : MonoBehaviour
     void Start()
     {
         damage=PlayerStats.Instance.GetWeaponInt(weapon)*weapon.attackPower;
-        PlayerStats.Instance.UserAttack();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -21,7 +20,6 @@ public class AttackTrigger : MonoBehaviour
         {
             // ここで敵にダメージを与える処理を呼び出す
             other.GetComponent<Enemy>().Damage(damage);
-            StartCoroutine(CoolTime());
             Debug.Log(other.name + "に" + damage + "ダメージを与えました！");
         }
     }
@@ -31,9 +29,4 @@ public class AttackTrigger : MonoBehaviour
         Destroy(gameObject);
     }
     
-    IEnumerator CoolTime()
-    {
-        yield return new WaitForSeconds(2.0f);
-        PlayerStats.Instance.UserAttackEnd();
-    }
 }
