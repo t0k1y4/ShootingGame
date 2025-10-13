@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: UserAttack
   m_EditorClassIdentifier: 
   weaponName: UserAttack
-  attackPower: 0
+  attackPower: 2
   icon: {fileID: 1828843058721014722, guid: 94f82ef769ef4eb4c97cc96408ed4d70, type: 3}
   price: 20
   text: 

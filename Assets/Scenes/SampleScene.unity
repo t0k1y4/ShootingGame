@@ -8588,11 +8588,30 @@ PrefabInstance:
       propertyPath: smg
       value: 
       objectReference: {fileID: 361340541}
+    - target: {fileID: 9084005050965886166, guid: e6674a14527d5e940a8a712b02678b79, type: 3}
+      propertyPath: m_Type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084005050965886166, guid: e6674a14527d5e940a8a712b02678b79, type: 3}
+      propertyPath: m_FillOrigin
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6674a14527d5e940a8a712b02678b79, type: 3}
+--- !u!114 &2045356043 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9084005050965886166, guid: e6674a14527d5e940a8a712b02678b79, type: 3}
+  m_PrefabInstance: {fileID: 2043480493}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1469226810639761728
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8755,6 +8774,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 361340542}
     - target: {fileID: 5750381159659899577, guid: 07545470b28f0214a9f9f6144aa853b4, type: 3}
+      propertyPath: uAttackImg
+      value: 
+      objectReference: {fileID: 2045356043}
+    - target: {fileID: 5750381159659899577, guid: 07545470b28f0214a9f9f6144aa853b4, type: 3}
+      propertyPath: userAttack
+      value: 
+      objectReference: {fileID: 11400000, guid: e8045d7a268ba3349ad2f179bae90252, type: 2}
+    - target: {fileID: 5750381159659899577, guid: 07545470b28f0214a9f9f6144aa853b4, type: 3}
       propertyPath: wallHpText
       value: 
       objectReference: {fileID: 197952916}
@@ -8766,6 +8793,10 @@ PrefabInstance:
       propertyPath: difficaltyText
       value: 
       objectReference: {fileID: 1554750636}
+    - target: {fileID: 5750381159659899577, guid: 07545470b28f0214a9f9f6144aa853b4, type: 3}
+      propertyPath: attackHitboxPrefab
+      value: 
+      objectReference: {fileID: 6750061750461050585, guid: 1f53f0ac49920c14eb12737843549cea, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

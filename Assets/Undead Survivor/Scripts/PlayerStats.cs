@@ -25,6 +25,7 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
     bool supporter2 = false;
     bool supporter3 = false;
 
+    bool userIsAttack = false;
 
     // 所持金を増やすメソッド
     public void AddMoney(int amount)
@@ -37,6 +38,24 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
     {
         money -= amount;
         OnMoneyChanged?.Invoke();
+    }
+    public bool UserIsAttack()
+    {
+        return userIsAttack;
+    }
+    public void UserAttack()
+    {
+        userIsAttack = true;
+    }
+    
+    public void UserAttackEnd()
+    {
+        userIsAttack = false;
+    }
+
+    public int GetWeaponInt(WeaponData weapon)
+    {
+        return weapons[weapon];
     }
 
 
