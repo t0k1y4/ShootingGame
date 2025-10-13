@@ -202,6 +202,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 835669233140141938, guid: 246c5489b2f715e4fb9992139a070594, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 896048749517044518, guid: 246c5489b2f715e4fb9992139a070594, type: 3}
+      propertyPath: angleOffset
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741183641841018386, guid: 246c5489b2f715e4fb9992139a070594, type: 3}
+      propertyPath: angleOffset
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5198514641721585381, guid: 246c5489b2f715e4fb9992139a070594, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5841682618290021807, guid: 246c5489b2f715e4fb9992139a070594, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.7098885
@@ -245,6 +261,10 @@ PrefabInstance:
     - target: {fileID: 6776679597272698032, guid: 246c5489b2f715e4fb9992139a070594, type: 3}
       propertyPath: m_Name
       value: Suppoters
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857196903743502824, guid: 246c5489b2f715e4fb9992139a070594, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

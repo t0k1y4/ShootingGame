@@ -52,7 +52,7 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
             else if (newWeapon.weaponName == "HPHeal")
             {
                 Wall.Instance.WallRecover(Wall.Instance.WallMaxHp / 4);
-                Debug.Log(newWeapon.weaponName+"を使用しました。現在のHP:"+Wall.Instance.WallHp+"/"+Wall.Instance.WallMaxHp);
+                Debug.Log(newWeapon.weaponName + "を使用しました。現在のHP:" + Wall.Instance.WallHp + "/" + Wall.Instance.WallMaxHp);
             }
             else
             {
@@ -93,6 +93,21 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
     public float GetWeaponRate(WeaponData weapon)
     {
         return weapon.rate * weapons[weapon];
+    }
+
+    public int GetWeaponCount(string name)
+    {
+        int count = 0;
+        foreach (KeyValuePair<WeaponData, int> weapon in weapons)
+        {
+            if (weapon.Key.name.Contains(name))
+            {
+                count = weapons[weapon.Key];
+                //Debug.Log(count);
+                return count;
+            }
+        }
+        return count;
     }
 
     public void ResetData()
@@ -148,7 +163,7 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
 
     public float GetPlayerRate(float defaultRate)
     {
-        float rate = 0;
+        float rate = 1f;
         foreach (KeyValuePair<WeaponData, int> weapon in weapons)
         {
             if (weapon.Key.name.Contains("RateUp"))
