@@ -60,6 +60,7 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
                 if (newWeapon.weaponName == "MaxHPUp")
                 {
                     Wall.Instance.WallCustom(1.1f, true);
+                    Debug.Log(newWeapon.weaponName+"を使用しました。現在のHP:"+Wall.Instance.WallHp+"/"+Wall.Instance.WallMaxHp);
                 }
                 Debug.Log(newWeapon.weaponName + "をインベントリに追加しました。現在の個数: " + weapons[newWeapon]);
             }
