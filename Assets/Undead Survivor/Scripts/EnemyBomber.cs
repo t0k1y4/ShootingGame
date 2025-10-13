@@ -52,6 +52,16 @@ public class EnemyBomber : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Bullet"))
+        {
+            {
+                Damage(collision.gameObject.GetComponent<BulletController>().damage);
+            }
+        }
+    }
+
 
     void OnCollisionStay2D(Collision2D collision)
     {

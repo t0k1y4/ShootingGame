@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -49,13 +50,23 @@ public class Enemy : MonoBehaviour
         //deadSound.Play();
         if (hp <= 0)
         {
-            PlayerStats.Instance.AddMoney(1*(int)difficalty);
+            PlayerStats.Instance.AddMoney(1 * (int)difficalty);
             gameController.KilledCount();
             //敵が死んだらサウンドを再生
             AudioSource.PlayClipAtPoint(deadSound.clip, transform.position);
             Destroy(gameObject);
         }
     }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Bullet"))
+        {
+            {
+                Damage(collision.gameObject.GetComponent<BulletController>().damage);
+            }
+        }
+    }
+
 
     void OnCollisionEnter2D(Collision2D collision)
     {
