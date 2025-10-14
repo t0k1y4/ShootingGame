@@ -18,12 +18,14 @@ public class Wall : MonoBehaviour
     public void OnRetryYes() //リトライする
     {
         Time.timeScale = 1f; // ポーズ解除
+        PlayerStats.Instance.ResetData();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); // 現在のシーンを再読み込み
     }
 
     public void OnRetryNo() //リトライしない
     {
         Time.timeScale = 1f; // ポーズ解除
+        PlayerStats.Instance.ResetData();
         SceneManager.LoadScene("StartScene"); // タイトル画面など別シーン名に変更
     }
 

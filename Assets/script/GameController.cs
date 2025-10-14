@@ -114,7 +114,10 @@ public class GameController : MonoBehaviour
     {
         PlayerStats.Instance.AddMoney(difficalty * 10);//数字は適当
         shopManager.RefreshShopItems();
-        shopOpener.Shoping();
+    
+             shopOpener.Shoping();
+        
+       
     }
 
     public void UIUpdater()
