@@ -206,7 +206,8 @@ MonoBehaviour:
   speed: 1
   isBound: 0
   atkInterval: 1
-  atkTimer: 0
+  atkTimer: 3
+  bombTimer: 5
 --- !u!82 &5331734831334777910
 AudioSource:
   m_ObjectHideFlags: 0
