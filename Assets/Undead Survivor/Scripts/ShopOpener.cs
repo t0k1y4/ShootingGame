@@ -39,12 +39,13 @@ public class ShopOpener : MonoBehaviour
 
     void Update()
     {
-        // アニメーション中は操作を受け付けない
-        if (isAnimating) return;
+        
     }
 
     public void Shoping()
     {
+        // アニメーション中は操作を受け付けない
+        if (isAnimating) return;
         isAnimating = true; // アニメーション開始
 
         if (isShopOpen)

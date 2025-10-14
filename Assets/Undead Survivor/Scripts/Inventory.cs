@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,6 +8,7 @@ public class Inventory : MonoBehaviour
 {
     // インベントリUIのアイコンImageの配列
     [SerializeField] private Image[] itemIcons; // アイコン画像を表示するUIの配列
+    [SerializeField] private TextMeshProUGUI[] quantityTexts;
     [SerializeField] private WeaponData[] allWeaponData;
 
     void OnEnable()
@@ -42,12 +45,14 @@ public class Inventory : MonoBehaviour
 
             // allWeaponData配列内で、所持している武器が何番目にあるかを検索
             int index = System.Array.IndexOf(allWeaponData, weapon);
+            String text = "" + PlayerStats.Instance.GetWeaponInt(weapon);
 
             // インデックスが有効な範囲内か確認
             if (index >= 0 && index < itemIcons.Length)
             {
                 // 対応するUIスロットにアイコンを設定
                 itemIcons[index].sprite = weapon.icon;
+                quantityTexts[index].text = text;
             }
         }
     }
