@@ -17,11 +17,15 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
     public event Action OnWeaponsChanged;
     public event Action OnMoneyChanged;
 
+    public float diameterRate = 0.05f;
+    public float diameterSupRate = 0.03f;
+
     // 仲間のアクティブ状態
     bool supporter1 = false;
     bool supporter2 = false;
     bool supporter3 = false;
 
+    bool userIsAttack = false;
 
     // 所持金を増やすメソッド
     public void AddMoney(int amount)
@@ -35,6 +39,24 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
         money -= amount;
         OnMoneyChanged?.Invoke();
     }
+    public bool UserIsAttack()
+    {
+        return userIsAttack;
+    }
+    public void UserAttack()
+    {
+        userIsAttack = true;
+    }
+    
+    public void UserAttackEnd()
+    {
+        userIsAttack = false;
+    }
+
+    public int GetWeaponInt(WeaponData weapon)
+    {
+        return weapons[weapon];
+    }
 
 
     public void AddWeapon(WeaponData newWeapon)
@@ -44,12 +66,24 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
             if (weapons.ContainsKey(newWeapon))
             {
                 weapons[newWeapon]++; // すでに持っているなら個数を増やす
+                Debug.Log(newWeapon.weaponName + "をインベントリに追加しました。現在の個数: " + weapons[newWeapon]);
+            }
+            else if (newWeapon.weaponName == "HPHeal")
+            {
+                Wall.Instance.WallRecover(Wall.Instance.WallMaxHp / 4);
+                Debug.Log(newWeapon.weaponName + "を使用しました。現在のHP:" + Wall.Instance.WallHp + "/" + Wall.Instance.WallMaxHp);
             }
             else
             {
                 weapons.Add(newWeapon, 1); // 持っていなければ追加する
+                if (newWeapon.weaponName == "MaxHPUp")
+                {
+                    Wall.Instance.WallCustom(1.1f, true);
+                    Debug.Log(newWeapon.weaponName+"を使用しました。現在のHP:"+Wall.Instance.WallHp+"/"+Wall.Instance.WallMaxHp);
+                }
+                Debug.Log(newWeapon.weaponName + "をインベントリに追加しました。現在の個数: " + weapons[newWeapon]);
             }
-            Debug.Log(newWeapon.weaponName + "をインベントリに追加しました。現在の個数: " + weapons[newWeapon]);
+
 
             // 仲間をアクティブに変更
             if (newWeapon.name.Contains("Supporter1"))
@@ -81,6 +115,21 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
         return weapon.rate * weapons[weapon];
     }
 
+    public int GetWeaponCount(string name)
+    {
+        int count = 0;
+        foreach (KeyValuePair<WeaponData, int> weapon in weapons)
+        {
+            if (weapon.Key.name.Contains(name))
+            {
+                count = weapons[weapon.Key];
+                //Debug.Log(count);
+                return count;
+            }
+        }
+        return count;
+    }
+
     public void ResetData()
     {
         money = initialMoney;
@@ -88,6 +137,7 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
         supporter1 = false;
         supporter2 = false;
         supporter3 = false;
+        userIsAttack = false;
         foreach (var weapon in initialWeapons)
         {
             AddWeapon(weapon);
@@ -95,8 +145,6 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
         OnMoneyChanged?.Invoke();
         Debug.Log("PlayerStatsをリセットしました。");
     }
-    
-
 
     // 仲間のアクティブ状態を取得
     public bool GetSupporter(int number)
@@ -117,5 +165,128 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
         }
 
     }
+
+    // 主人公のダメージの計算・取得
+    public float GetPlayerDamage()
+    {
+        float totalDamage = 5;
+        foreach (KeyValuePair<WeaponData, int> weapon in weapons)
+        {
+            if (weapon.Key.name.Contains("DamageUp"))
+            {
+                Debug.Log("主人公武器ダメージ計算");
+                totalDamage += GetWeaponPower(weapon.Key);
+            }
+        }
+        Debug.Log("現在のダメージ：" + totalDamage);
+        return totalDamage;
+    }
+
+    public float GetPlayerRate(float defaultRate)
+    {
+        float rate = 1f;
+        foreach (KeyValuePair<WeaponData, int> weapon in weapons)
+        {
+            if (weapon.Key.name.Contains("RateUp"))
+            {
+                Debug.Log("主人公発射レート計算");
+                rate = defaultRate / (diameterRate * GetWeaponRate(weapon.Key) + 1f);
+            }
+            else
+            {
+                rate = defaultRate;
+            }
+        }
+        Debug.Log("現在のレート：" + rate);
+        return rate;
+    }
+
+    // 仲間のダメージの計算・取得
+    public float GetSupporterDamage(int number)
+    {
+        float totalDamage = 5;
+        switch (number)
+        {
+            case 1:
+                foreach (KeyValuePair<WeaponData, int> weapon in weapons)
+                {
+                    if (weapon.Key.name.Contains("Supporter1"))
+                    {
+                        Debug.Log("１武器ダメージ計算");
+                        totalDamage += GetWeaponPower(weapon.Key);
+                    }
+                }
+                return totalDamage;
+
+            case 2:
+                foreach (KeyValuePair<WeaponData, int> weapon in weapons)
+                {
+                    if (weapon.Key.name.Contains("Supporter2"))
+                    {
+                        Debug.Log("２武器ダメージ計算");
+                        totalDamage += GetWeaponPower(weapon.Key);
+                    }
+                }
+                return totalDamage;
+
+            case 3:
+                foreach (KeyValuePair<WeaponData, int> weapon in weapons)
+                {
+                    if (weapon.Key.name.Contains("Supporter3"))
+                    {
+                        Debug.Log("３武器ダメージ計算");
+                        totalDamage += GetWeaponPower(weapon.Key);
+                    }
+                }
+                return totalDamage;
+
+            default:
+                return 0;
+        }
+    }
+    public float GetSupporterRate(int number, float defaultRate)
+    {
+        float rate = 1f;
+        switch (number)
+        {
+            case 1:
+                foreach (KeyValuePair<WeaponData, int> weapon in weapons)
+                {
+                    if (weapon.Key.name.Contains("Supporter1"))
+                    {
+                        Debug.Log("１発射レート計算");
+                        rate = defaultRate / (diameterRate * GetWeaponRate(weapon.Key) + 1f);
+                    }
+                }
+                return rate;
+
+            case 2:
+                foreach (KeyValuePair<WeaponData, int> weapon in weapons)
+                {
+                    if (weapon.Key.name.Contains("Supporter2"))
+                    {
+                        Debug.Log("２発射レート計算");
+                        rate = defaultRate / (diameterRate * GetWeaponRate(weapon.Key) + 1f);
+                    }
+                }
+                return rate;
+
+            case 3:
+                foreach (KeyValuePair<WeaponData, int> weapon in weapons)
+                {
+                    if (weapon.Key.name.Contains("Supporter3"))
+                    {
+                        Debug.Log("３発射レート計算");
+                        rate = defaultRate / (diameterRate * GetWeaponRate(weapon.Key) + 1f);
+                    }
+                }
+                return rate;
+
+            default:
+                return 0;
+        }
+    }
+
+
 
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,17 +12,20 @@ public class Wall : MonoBehaviour
     AudioSource destroySound;    //バリケード崩壊音
     public float WallHp { get; private set; }
     public float WallMaxHp { get; private set; }
+    public event Action OnWallHpChanged;
 
 
     public void OnRetryYes() //リトライする
     {
         Time.timeScale = 1f; // ポーズ解除
+        PlayerStats.Instance.ResetData();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); // 現在のシーンを再読み込み
     }
 
     public void OnRetryNo() //リトライしない
     {
         Time.timeScale = 1f; // ポーズ解除
+        PlayerStats.Instance.ResetData();
         SceneManager.LoadScene("StartScene"); // タイトル画面など別シーン名に変更
     }
 
@@ -38,7 +42,6 @@ public class Wall : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
             WallMaxHp = 100;
             WallHp = WallMaxHp;
             Debug.Log(WallHp);
@@ -48,6 +51,7 @@ public class Wall : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        OnWallHpChanged?.Invoke();
     }
 
     public void WallDamage(float damage)
@@ -56,6 +60,7 @@ public class Wall : MonoBehaviour
         Debug.Log(WallHp);
         WallHp -= damage;
         Debug.Log(WallHp);
+        OnWallHpChanged?.Invoke();
         if (WallHp <= 0)
         {
             //バリケードが壊れたらサウンドを再生
@@ -64,40 +69,44 @@ public class Wall : MonoBehaviour
             // ゲームオーバー処理をここに記述
             // GameManager.Instance.GameOver();
 
-            //gameoverCanvasを表示する
-            GameOverCanvas.SetActive(true);
-
             //ゲームをポーズする
             Time.timeScale = 0f;
-
+            //gameoverCanvasを表示する
+            GameOverCanvas.SetActive(true);
             //continue?
             IsRetryCanvas.SetActive(true);
+
+            //これ以上の更新updateを止める
+            enabled = false;
         }
     }
 
     //最大値を増やせる処理
-    public void wallCustom(float maxUp)
+    public void WallCustom(float maxUp)
     {
         WallMaxHp += maxUp;
         WallHp += maxUp;
+        OnWallHpChanged?.Invoke();
     }
 
     //最大値を増やすときに乗算にできるオーバーロード
-    public void wallCustom(float maxUp, bool multiplication)
+    public void WallCustom(float maxUp, bool multiplication)
     {
         if (multiplication)
         {
             WallMaxHp *= maxUp;
             WallHp *= maxUp;
+            OnWallHpChanged?.Invoke();
         }
-        else wallCustom(maxUp);
+        else WallCustom(maxUp);
     }
 
     //壁を回復するだけの処理
-    public void wallRecover(float heal)
+    public void WallRecover(float heal)
     {
         WallHp += heal;
         WallHp = Mathf.Min(WallHp, WallMaxHp);
+        OnWallHpChanged?.Invoke();
     }
 }
 

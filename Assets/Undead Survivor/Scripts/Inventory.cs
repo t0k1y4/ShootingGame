@@ -1,11 +1,15 @@
+using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
     // インベントリUIのアイコンImageの配列
-    [SerializeField] private Image[] itemIcons;
+    [SerializeField] private Image[] itemIcons; // アイコン画像を表示するUIの配列
+    [SerializeField] private TextMeshProUGUI[] quantityTexts;
+    [SerializeField] private WeaponData[] allWeaponData;
 
     void OnEnable()
     {
@@ -31,25 +35,24 @@ public class Inventory : MonoBehaviour
 
     public void UIUpdater()
     {
-        // Dictionaryのキー（ユニークなWeaponData）をリストに変換
-        List<WeaponData> uniqueWeapons = new List<WeaponData>(PlayerStats.Instance.weapons.Keys);
+        // 所持している武器のリスト
+        List<WeaponData> ownedWeapons = new List<WeaponData>(PlayerStats.Instance.weapons.Keys);
 
-        // UIスロットを更新
-        for (int i = 0; i < itemIcons.Length; i++)
+        // 所持している武器を、allWeaponDataのインデックスに基づいて対応するスロットに表示する
+        foreach (var ownedWeaponPair in ownedWeapons)
         {
-            if (i < uniqueWeapons.Count)
-            {
-                // UIに表示する武器のデータ
-                WeaponData weapon = uniqueWeapons[i];
+            WeaponData weapon = ownedWeaponPair; // KeyValuePairからキー(WeaponData)を取得
 
-                itemIcons[i].sprite = weapon.icon; // アイコン画像を設定
-                itemIcons[i].enabled = true; // 画像を表示
-            }
-            else
+            // allWeaponData配列内で、所持している武器が何番目にあるかを検索
+            int index = System.Array.IndexOf(allWeaponData, weapon);
+            String text = "" + PlayerStats.Instance.GetWeaponInt(weapon);
+
+            // インデックスが有効な範囲内か確認
+            if (index >= 0 && index < itemIcons.Length)
             {
-                // アイテムがないスロットは非表示に
-                itemIcons[i].sprite = null;
-                itemIcons[i].enabled = false;
+                // 対応するUIスロットにアイコンを設定
+                itemIcons[index].sprite = weapon.icon;
+                quantityTexts[index].text = text;
             }
         }
     }
