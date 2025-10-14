@@ -31,8 +31,8 @@ public class Wall : MonoBehaviour
     private void Awake()
     {
         //gameoverは最初非表示
-        //IsRetryCanvas.SetActive(false);
-        //  GameOverCanvas.SetActive(false);
+        IsRetryCanvas.SetActive(false);
+        GameOverCanvas.SetActive(false);
 
         //死んだ音
         destroySound = GetComponent<AudioSource>();
@@ -40,7 +40,6 @@ public class Wall : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
             WallMaxHp = 100;
             WallHp = WallMaxHp;
             Debug.Log(WallHp);
@@ -68,12 +67,12 @@ public class Wall : MonoBehaviour
             // ゲームオーバー処理をここに記述
             // GameManager.Instance.GameOver();
 
-            //gameoverCanvasを表示する
-            GameOverCanvas.SetActive(true);
+            
 
             //ゲームをポーズする
             Time.timeScale = 0f;
-
+            //gameoverCanvasを表示する
+            GameOverCanvas.SetActive(true);
             //continue?
             IsRetryCanvas.SetActive(true);
         }

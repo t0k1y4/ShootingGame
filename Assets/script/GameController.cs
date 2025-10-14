@@ -7,7 +7,7 @@ using DG.Tweening;
 public class GameController : MonoBehaviour
 {
 
-    float coolTime ;
+    float coolTime;
     float killed = 0;       // 敵を倒した数
     int difficalty = 0;     // 難易度
     public int diff = 10;   // 難易度の上昇量
@@ -21,6 +21,8 @@ public class GameController : MonoBehaviour
     public GameObject attackHitboxPrefab;
     public Image uAttackImg;
     public WeaponData userAttack;
+    public float attackWidth = 4f;
+    public float attackHeight = 2f;
 
     void OnEnable()
     {
@@ -49,16 +51,37 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        // 左マウスボタンがクリックされた瞬間を検出
-        if (Input.GetMouseButtonDown(0) && PlayerStats.Instance.UserIsAttack() == false)
+        if (Input.GetMouseButtonDown(0) && PlayerStats.Instance.UserIsAttack() == false&&Time.timeScale>0)
         {
             // マウスのスクリーン座標をワールド座標に変換
-            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mousePosition.z = 0; // 2Dゲームなのでz座標は0に固定
+            Vector3 mouseScreenPosition = Input.mousePosition;
+            Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(
+                new Vector3(mouseScreenPosition.x, mouseScreenPosition.y, Camera.main.transform.position.z * -1)
+            );
 
-            // 攻撃判定を生成
-            Instantiate(attackHitboxPrefab, mousePosition, Quaternion.identity);
-            StartCoroutine(CoolTime());
+            // プレイヤーの位置とクリック位置のVector2を取得
+            Vector2 playerPosition2D = new Vector2(transform.position.x, transform.position.y);
+            Vector2 clickPosition2D = new Vector2(mouseWorldPosition.x, mouseWorldPosition.y);
+
+            // プレイヤーの位置を中心とするRectを作成
+            Rect attackRect = new Rect(
+                playerPosition2D.x - attackWidth / 2,
+                playerPosition2D.y - attackHeight / 2,
+                attackWidth,
+                attackHeight
+            );
+
+            // クリック位置が長方形内にあるか判定
+            if (attackRect.Contains(clickPosition2D))
+            {
+                // 範囲内であれば攻撃判定を生成
+                Instantiate(attackHitboxPrefab, new Vector3(clickPosition2D.x, clickPosition2D.y, 0), Quaternion.identity);
+                StartCoroutine(CoolTime());
+            }
+            else
+            {
+                Debug.Log("攻撃範囲外です。");
+            }
         }
     }
 
@@ -101,7 +124,7 @@ public class GameController : MonoBehaviour
 
     IEnumerator CoolTime()
     {
-        coolTime = 1.6f - (PlayerStats.Instance.GetWeaponInt(userAttack)/10);
+        coolTime = 1.6f - (PlayerStats.Instance.GetWeaponInt(userAttack) / 10);
         PlayerStats.Instance.UserAttack();
         uAttackImg.DOFillAmount(1, coolTime)
     .From(0) // 0から開始
@@ -110,5 +133,11 @@ public class GameController : MonoBehaviour
         PlayerStats.Instance.UserAttackEnd();
     }
 
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        // プレイヤーの位置を中心として長方形を描画
+        Gizmos.DrawWireCube(transform.position, new Vector3(attackWidth, attackHeight, 0));
+    }
 
 }
