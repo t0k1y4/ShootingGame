@@ -1,0 +1,2560 @@
+fileFormatVersion: 2
+guid: f3cfa062803fa3c46b805ee1a18529cd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8074797408633085388
+    second: 19_freezing_spritesheet_0
+  - first:
+      213: 3548034102256638401
+    second: 19_freezing_spritesheet_1
+  - first:
+      213: 147150868645767861
+    second: 19_freezing_spritesheet_2
+  - first:
+      213: -6315313422753602640
+    second: 19_freezing_spritesheet_3
+  - first:
+      213: 6113304997333071210
+    second: 19_freezing_spritesheet_4
+  - first:
+      213: 490134665841381762
+    second: 19_freezing_spritesheet_5
+  - first:
+      213: -7332837033387140759
+    second: 19_freezing_spritesheet_6
+  - first:
+      213: -8399928939106582215
+    second: 19_freezing_spritesheet_7
+  - first:
+      213: -6827408494210796482
+    second: 19_freezing_spritesheet_8
+  - first:
+      213: -6868439882769937245
+    second: 19_freezing_spritesheet_9
+  - first:
+      213: -5940929447668993909
+    second: 19_freezing_spritesheet_10
+  - first:
+      213: -5042587675877633845
+    second: 19_freezing_spritesheet_11
+  - first:
+      213: 3196488043108569880
+    second: 19_freezing_spritesheet_12
+  - first:
+      213: -66613653339448110
+    second: 19_freezing_spritesheet_13
+  - first:
+      213: -3204719212183461505
+    second: 19_freezing_spritesheet_14
+  - first:
+      213: 4574884442131987820
+    second: 19_freezing_spritesheet_15
+  - first:
+      213: -4152601336781315791
+    second: 19_freezing_spritesheet_16
+  - first:
+      213: -1342657991091319304
+    second: 19_freezing_spritesheet_17
+  - first:
+      213: 5134329544671924625
+    second: 19_freezing_spritesheet_18
+  - first:
+      213: 8856504045017372524
+    second: 19_freezing_spritesheet_19
+  - first:
+      213: -8317144770564896448
+    second: 19_freezing_spritesheet_20
+  - first:
+      213: 8670492220108037446
+    second: 19_freezing_spritesheet_21
+  - first:
+      213: -3744605553180862115
+    second: 19_freezing_spritesheet_22
+  - first:
+      213: -1482144494505555051
+    second: 19_freezing_spritesheet_23
+  - first:
+      213: 3369662558127663499
+    second: 19_freezing_spritesheet_24
+  - first:
+      213: -6990419774802780019
+    second: 19_freezing_spritesheet_25
+  - first:
+      213: 7493231936304098576
+    second: 19_freezing_spritesheet_26
+  - first:
+      213: -8908903546756833472
+    second: 19_freezing_spritesheet_27
+  - first:
+      213: 1459955753479619352
+    second: 19_freezing_spritesheet_28
+  - first:
+      213: -7068106951425925726
+    second: 19_freezing_spritesheet_29
+  - first:
+      213: 166993188217992290
+    second: 19_freezing_spritesheet_30
+  - first:
+      213: 6094209800956545608
+    second: 19_freezing_spritesheet_31
+  - first:
+      213: 344383660308585852
+    second: 19_freezing_spritesheet_32
+  - first:
+      213: -7197610701850030677
+    second: 19_freezing_spritesheet_33
+  - first:
+      213: -4136760084261050554
+    second: 19_freezing_spritesheet_34
+  - first:
+      213: 7562332230888303148
+    second: 19_freezing_spritesheet_35
+  - first:
+      213: 1970742065824914700
+    second: 19_freezing_spritesheet_36
+  - first:
+      213: -6045629577852831372
+    second: 19_freezing_spritesheet_37
+  - first:
+      213: -6015456876065763097
+    second: 19_freezing_spritesheet_38
+  - first:
+      213: -4210796876952663718
+    second: 19_freezing_spritesheet_39
+  - first:
+      213: 8959129849111295564
+    second: 19_freezing_spritesheet_40
+  - first:
+      213: 2462330538069372506
+    second: 19_freezing_spritesheet_41
+  - first:
+      213: 7985032666054973054
+    second: 19_freezing_spritesheet_42
+  - first:
+      213: 8024608894494945353
+    second: 19_freezing_spritesheet_43
+  - first:
+      213: -897946309502641581
+    second: 19_freezing_spritesheet_44
+  - first:
+      213: 323182849247070737
+    second: 19_freezing_spritesheet_45
+  - first:
+      213: 6208396675098705105
+    second: 19_freezing_spritesheet_46
+  - first:
+      213: 3371172148382455016
+    second: 19_freezing_spritesheet_47
+  - first:
+      213: 7590739097651913346
+    second: 19_freezing_spritesheet_48
+  - first:
+      213: -4338701231965591903
+    second: 19_freezing_spritesheet_49
+  - first:
+      213: 6931386863622081010
+    second: 19_freezing_spritesheet_50
+  - first:
+      213: 9094731521950418028
+    second: 19_freezing_spritesheet_51
+  - first:
+      213: -7509546276854419879
+    second: 19_freezing_spritesheet_52
+  - first:
+      213: 1979531610792121492
+    second: 19_freezing_spritesheet_53
+  - first:
+      213: -8494580132921171388
+    second: 19_freezing_spritesheet_54
+  - first:
+      213: -813915123737310143
+    second: 19_freezing_spritesheet_55
+  - first:
+      213: 2952986349100133096
+    second: 19_freezing_spritesheet_56
+  - first:
+      213: 2301356048841391621
+    second: 19_freezing_spritesheet_57
+  - first:
+      213: 8510400294500113143
+    second: 19_freezing_spritesheet_58
+  - first:
+      213: 2668233777201121699
+    second: 19_freezing_spritesheet_59
+  - first:
+      213: 6145290077083724848
+    second: 19_freezing_spritesheet_60
+  - first:
+      213: 3012157752063112024
+    second: 19_freezing_spritesheet_61
+  - first:
+      213: 6113730290244917572
+    second: 19_freezing_spritesheet_62
+  - first:
+      213: 957655844040938753
+    second: 19_freezing_spritesheet_63
+  - first:
+      213: 3995118166617743108
+    second: 19_freezing_spritesheet_64
+  - first:
+      213: 3717469849479359951
+    second: 19_freezing_spritesheet_65
+  - first:
+      213: -8740749419883721019
+    second: 19_freezing_spritesheet_66
+  - first:
+      213: -6551614312932231717
+    second: 19_freezing_spritesheet_67
+  - first:
+      213: 3567158656917262760
+    second: 19_freezing_spritesheet_68
+  - first:
+      213: 6823519762207453413
+    second: 19_freezing_spritesheet_69
+  - first:
+      213: 6452420929916998429
+    second: 19_freezing_spritesheet_70
+  - first:
+      213: -418940265202899234
+    second: 19_freezing_spritesheet_71
+  - first:
+      213: 8554918547495490434
+    second: 19_freezing_spritesheet_72
+  - first:
+      213: -3674376481425416719
+    second: 19_freezing_spritesheet_73
+  - first:
+      213: -5086861381872106863
+    second: 19_freezing_spritesheet_74
+  - first:
+      213: -4262811528292086929
+    second: 19_freezing_spritesheet_75
+  - first:
+      213: 8418611025169598636
+    second: 19_freezing_spritesheet_76
+  - first:
+      213: 6912038220050557151
+    second: 19_freezing_spritesheet_77
+  - first:
+      213: 8561238638289829466
+    second: 19_freezing_spritesheet_78
+  - first:
+      213: 5172565367575370497
+    second: 19_freezing_spritesheet_79
+  - first:
+      213: -101150376359802742
+    second: 19_freezing_spritesheet_80
+  - first:
+      213: -2454802289113347898
+    second: 19_freezing_spritesheet_81
+  - first:
+      213: -6633545785768662560
+    second: 19_freezing_spritesheet_82
+  - first:
+      213: 2196550373975643903
+    second: 19_freezing_spritesheet_83
+  - first:
+      213: 82434260069493446
+    second: 19_freezing_spritesheet_84
+  - first:
+      213: -2866205307510962831
+    second: 19_freezing_spritesheet_85
+  - first:
+      213: -389596646789892794
+    second: 19_freezing_spritesheet_86
+  - first:
+      213: -399471128672775815
+    second: 19_freezing_spritesheet_87
+  - first:
+      213: -3922964146069220889
+    second: 19_freezing_spritesheet_88
+  - first:
+      213: -8991541583155198160
+    second: 19_freezing_spritesheet_89
+  - first:
+      213: -4634460728853621163
+    second: 19_freezing_spritesheet_90
+  - first:
+      213: -6484272819913052693
+    second: 19_freezing_spritesheet_91
+  - first:
+      213: -5690602487667581440
+    second: 19_freezing_spritesheet_92
+  - first:
+      213: -8260709930979103167
+    second: 19_freezing_spritesheet_93
+  - first:
+      213: -5574515915634477935
+    second: 19_freezing_spritesheet_94
+  - first:
+      213: 3284500248369796468
+    second: 19_freezing_spritesheet_95
+  - first:
+      213: -7921305133086870422
+    second: 19_freezing_spritesheet_96
+  - first:
+      213: -8724759797049860197
+    second: 19_freezing_spritesheet_97
+  - first:
+      213: 7103532385774439595
+    second: 19_freezing_spritesheet_98
+  - first:
+      213: 907854647005622189
+    second: 19_freezing_spritesheet_99
+  - first:
+      213: 4338773921230460536
+    second: 19_freezing_spritesheet_100
+  - first:
+      213: 4976761622395300192
+    second: 19_freezing_spritesheet_101
+  - first:
+      213: 5751593820596761378
+    second: 19_freezing_spritesheet_102
+  - first:
+      213: 1170422088096917638
+    second: 19_freezing_spritesheet_103
+  - first:
+      213: -2568131371151105205
+    second: 19_freezing_spritesheet_104
+  - first:
+      213: -5245043087605115709
+    second: 19_freezing_spritesheet_105
+  - first:
+      213: 2775553269952845793
+    second: 19_freezing_spritesheet_106
+  - first:
+      213: 5865508594686727473
+    second: 19_freezing_spritesheet_107
+  - first:
+      213: -1303729775974585493
+    second: 19_freezing_spritesheet_108
+  - first:
+      213: -7165155572784306465
+    second: 19_freezing_spritesheet_109
+  - first:
+      213: -6021165208078095101
+    second: 19_freezing_spritesheet_110
+  - first:
+      213: -6287285148898490892
+    second: 19_freezing_spritesheet_111
+  - first:
+      213: 9029973009589370533
+    second: 19_freezing_spritesheet_112
+  - first:
+      213: -3974197212885677704
+    second: 19_freezing_spritesheet_113
+  - first:
+      213: 2273587983259839238
+    second: 19_freezing_spritesheet_114
+  - first:
+      213: -3762345866273958252
+    second: 19_freezing_spritesheet_115
+  - first:
+      213: 1372503083605915606
+    second: 19_freezing_spritesheet_116
+  - first:
+      213: 7759249130143176849
+    second: 19_freezing_spritesheet_117
+  - first:
+      213: 502322308531121668
+    second: 19_freezing_spritesheet_118
+  - first:
+      213: -3405412559393761361
+    second: 19_freezing_spritesheet_119
+  - first:
+      213: -3854747116387735406
+    second: 19_freezing_spritesheet_120
+  - first:
+      213: 7274036309235190485
+    second: 19_freezing_spritesheet_121
+  - first:
+      213: -8717478309633913737
+    second: 19_freezing_spritesheet_122
+  - first:
+      213: 3981662255709543323
+    second: 19_freezing_spritesheet_123
+  - first:
+      213: 6058492326267551915
+    second: 19_freezing_spritesheet_124
+  - first:
+      213: -1185069830259987626
+    second: 19_freezing_spritesheet_125
+  - first:
+      213: -8154887220159873045
+    second: 19_freezing_spritesheet_126
+  - first:
+      213: 1683751676334934046
+    second: 19_freezing_spritesheet_127
+  - first:
+      213: -3029366976333346655
+    second: 19_freezing_spritesheet_128
+  - first:
+      213: -3832718017644946868
+    second: 19_freezing_spritesheet_129
+  - first:
+      213: 3415391725746519888
+    second: 19_freezing_spritesheet_130
+  - first:
+      213: -1707097963881330094
+    second: 19_freezing_spritesheet_131
+  - first:
+      213: 5610874242185783872
+    second: 19_freezing_spritesheet_132
+  - first:
+      213: 82639103755496260
+    second: 19_freezing_spritesheet_133
+  - first:
+      213: -436385319932357158
+    second: 19_freezing_spritesheet_134
+  - first:
+      213: 3366013010189612326
+    second: 19_freezing_spritesheet_135
+  - first:
+      213: -3256566212981432613
+    second: 19_freezing_spritesheet_136
+  - first:
+      213: 2714699420613673040
+    second: 19_freezing_spritesheet_137
+  - first:
+      213: 3886239179677137187
+    second: 19_freezing_spritesheet_138
+  - first:
+      213: 6953491419212881660
+    second: 19_freezing_spritesheet_139
+  - first:
+      213: -5254969634692229404
+    second: 19_freezing_spritesheet_140
+  - first:
+      213: -2811565793258823342
+    second: 19_freezing_spritesheet_141
+  - first:
+      213: -695679392719985911
+    second: 19_freezing_spritesheet_142
+  - first:
+      213: 4850670500228545852
+    second: 19_freezing_spritesheet_143
+  - first:
+      213: 4123520257150252105
+    second: 19_freezing_spritesheet_144
+  - first:
+      213: -4663985401418971609
+    second: 19_freezing_spritesheet_145
+  - first:
+      213: 1145638019084146178
+    second: 19_freezing_spritesheet_146
+  - first:
+      213: -4552890085507332986
+    second: 19_freezing_spritesheet_147
+  - first:
+      213: 2337239009494169125
+    second: 19_freezing_spritesheet_148
+  - first:
+      213: -5155682209981103638
+    second: 19_freezing_spritesheet_149
+  - first:
+      213: -2884028745794897012
+    second: 19_freezing_spritesheet_150
+  - first:
+      213: 3955865750403426476
+    second: 19_freezing_spritesheet_151
+  - first:
+      213: 8573951421643158656
+    second: 19_freezing_spritesheet_152
+  - first:
+      213: 7079850667592289441
+    second: 19_freezing_spritesheet_153
+  - first:
+      213: -1221092757903271293
+    second: 19_freezing_spritesheet_154
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f4272a53486ce14492faf8c7afa2b5a
+      internalID: 29090240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5fb8cc6ab92a0d42bce8f8fc55eac5e
+      internalID: -159805510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8714a2f12661e2a4a87667824de3c166
+      internalID: 2048215180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ab2109321584fb4e82796f89e0033a4
+      internalID: -1500839110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9443cf7c3433c24f8da235284409443
+      internalID: 12313357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b987576104a4663448fcd603d8aed8ae
+      internalID: -1411317338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9162483535da7040acce554b830ff49
+      internalID: -1458134585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a55b74a026a2a024e935f6478883d414
+      internalID: 576152158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d45ca68b122624842a6c78ca20bf1ff3
+      internalID: 1435603328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da5cdde3f8bc4fb4eb069fba9c59ae4c
+      internalID: 2037721145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79ede61cd8dbbb942a7864853f1e246b
+      internalID: -1274092369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16eabd5f17d1f32428c78e49c5377351
+      internalID: -2098592182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0ae9d32ffd27784486d3f34f139fde5
+      internalID: -284228467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ae4fe6e599fbf045bd0bd2d1bd3a794
+      internalID: 1049436194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c8946a77d1653842bc17b8a82f678da
+      internalID: 981838782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ec7f758fb7577b40b53326f61698c1f
+      internalID: 195889724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a95a67ce0489f4db490e8daeb40a45
+      internalID: 1742877092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff04eadeb4a342d45a5ddab19f8f13ea
+      internalID: -1092536544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a55bb7cf57d6964c9a4343a411249bd
+      internalID: -2001527606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fc1e9b04f7088145978f8de7e58864c
+      internalID: -1361221725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46ab30e774dcce541919bd6d3689edb9
+      internalID: 695979917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6647117ff64a9d448b3a971c2e9ef07
+      internalID: -630431765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbee4d5a769e42f4fba255ee6f19e4e3
+      internalID: 1314847347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dd693e3e95be4d4fa64ff10a764e1d3
+      internalID: 1023682019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f37b737355eee5647ae4d19775801d98
+      internalID: -332221022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eb7c3e0f17c72f4c8c7fa4c8e33f6c7
+      internalID: 153135439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 764bfeeabf035524db2a90b695b9e04c
+      internalID: 762370816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57eff349b35268348b770ba58f772924
+      internalID: -254240822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c467f30eaa4fc949898e4a076a02004
+      internalID: -798837755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 916c278d17974fc4da251643fa5c05d3
+      internalID: -810370086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44fc46a63a26a947997df2d089478d8
+      internalID: -1875369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36877183b6571e84cb0c8f8d6eaad025
+      internalID: -1862354266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73c84a1bdf4d47e40a7f2dd703b22ea4
+      internalID: -543376842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8378601b6f2d1b44ca5a7374c745b0f8
+      internalID: -1676400946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af99619084f16e84c9330cc042655bf7
+      internalID: 1513248370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bf8e0bd5fcd1e64fb2c2f4deed99e38
+      internalID: -888809301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b5dea8441005cc49a951efe3377af06
+      internalID: 1591053061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f15f4bf6ccc624fa584cf93dad8b0d
+      internalID: 807989662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e832119d324b0459d28b386a601f99
+      internalID: 905109734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a47faab2d039f47bbd0402a4afee3e
+      internalID: -38069145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b06e0f038482be4489f5f87f164cdeca
+      internalID: 1840258374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d371628b7c4b94b984e11a22635228
+      internalID: -1608075151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d39f32bbfc3d5448e019fec1af5244
+      internalID: 1213287071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef4057f3f459e6d4898895cbbcb553d0
+      internalID: -1221463198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 067180c39c2254a47aafb17be80e55f8
+      internalID: -301480188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 539e8528797a8ef469ecc208fcbb075d
+      internalID: -1658570665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75fadc37437b35145b1a1310189d5951
+      internalID: -1066689105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_47
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a5c889fc0adb12449e3be32da0beb55
+      internalID: 922444744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_48
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e830b01ae5726444fa00157c9917963a
+      internalID: 223028898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_49
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: accbc8eaa60ee774781a2e2f477ae4a7
+      internalID: 271885495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2657f49da8a313e49952ac6dd886f8c2
+      internalID: -1461239528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_51
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c0a2d7b350b0524cb5e1d3e23855280
+      internalID: 309862805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_52
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 719b84feda2b8804597c0a80d6162187
+      internalID: -1881555214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_53
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d3917b82ce320647873679ecae60f09
+      internalID: -139809984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_54
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe7aacb62461b443b5bd374071bc3a5
+      internalID: -330465433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_55
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc88f772c82b4140915de67652f7b73
+      internalID: 1561007138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_56
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14269bac770852498ea1e16ea43552e
+      internalID: 2047429720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_57
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f34b4a23ea8ab40823ed6e77d51294
+      internalID: 792238208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_58
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158a4286023dbf548908589facb3e9dc
+      internalID: 234607815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_59
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37ecf5a0bff68eb4f8346cd99c1a5afc
+      internalID: -960242466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30727420ef323ee40ab162719375a13f
+      internalID: -2108842024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_61
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55affce0e80cea04c914e54b13ddc037
+      internalID: 934879026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_62
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd4185ca2842e74c943c447222f97e8
+      internalID: 1756714200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_63
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffbcc6b14aa72ea4b8b449e197d2c8f4
+      internalID: -1868635111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_64
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b342e4ad5373aa4891722d042ace438
+      internalID: 1176358967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_65
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbaeb5fdf0c92c04b9e738a5c8db2ae3
+      internalID: -1322249309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_66
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 937b31c510b9e3c41a4d438510af77f4
+      internalID: -384800336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_67
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f0f02f956aedab4eb474dec3048d07e
+      internalID: -384439001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_68
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b31fc23281a35344f949c45949160423
+      internalID: -534101696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_69
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ffb02dc602d0674eaba74270b5a5481
+      internalID: -1321154009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49341d60cdf01444396ba957c3668bc7
+      internalID: 861607763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_71
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 989165b2c9cc0cd4d8a8c51a59bc0cc1
+      internalID: -857410195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_72
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37498973bd50cac41b7e791973851b3e
+      internalID: 296480638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_73
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29f526178bd26694c88ffe2f597abdc6
+      internalID: -1014965125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_74
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c74f0f5c1fe1b84c8776abe24555c0d
+      internalID: -1734594125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_75
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c79571a0df419440bfea508a40bd23e
+      internalID: -395701438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_76
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d89fc844ddcc9b4a8b3796affa6df58
+      internalID: 1017108631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_77
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8836c546461f9a4f80f5c163255db68
+      internalID: -1227794032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_78
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9da4c02abe3a05849a45a6be71108db4
+      internalID: -2066761308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_79
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c02bde3c6172fb441abbfde1f009d392
+      internalID: -367361336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9e55924ef4a4714480905a0eda3f669
+      internalID: -9262005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_81
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f4fb37c5dadab446af1d53688173c0d
+      internalID: 518040203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_82
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d126c62ed45c7641b02caa081f608fc
+      internalID: 1145455435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_83
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b388cc1fbf9b241bda576b93b333a4
+      internalID: -1408970784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_84
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44829bb174629b5449534f84eb998f09
+      internalID: -359032935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_freezing_spritesheet_85
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c01763bb47e96324982454def373a4c3
+      internalID: -1104525838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: def76a78e0c01594fa0d45871124d380
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      19_freezing_spritesheet_0: 29090240
+      19_freezing_spritesheet_1: -159805510
+      19_freezing_spritesheet_10: -1274092369
+      19_freezing_spritesheet_11: -2098592182
+      19_freezing_spritesheet_12: -284228467
+      19_freezing_spritesheet_13: 1049436194
+      19_freezing_spritesheet_14: 981838782
+      19_freezing_spritesheet_15: 195889724
+      19_freezing_spritesheet_16: 1742877092
+      19_freezing_spritesheet_17: -1092536544
+      19_freezing_spritesheet_18: -2001527606
+      19_freezing_spritesheet_19: -1361221725
+      19_freezing_spritesheet_2: 2048215180
+      19_freezing_spritesheet_20: 695979917
+      19_freezing_spritesheet_21: -630431765
+      19_freezing_spritesheet_22: 1314847347
+      19_freezing_spritesheet_23: 1023682019
+      19_freezing_spritesheet_24: -332221022
+      19_freezing_spritesheet_25: 153135439
+      19_freezing_spritesheet_26: 762370816
+      19_freezing_spritesheet_27: -254240822
+      19_freezing_spritesheet_28: -798837755
+      19_freezing_spritesheet_29: -810370086
+      19_freezing_spritesheet_3: -1500839110
+      19_freezing_spritesheet_30: -1875369
+      19_freezing_spritesheet_31: -1862354266
+      19_freezing_spritesheet_32: -543376842
+      19_freezing_spritesheet_33: -1676400946
+      19_freezing_spritesheet_34: 1513248370
+      19_freezing_spritesheet_35: -888809301
+      19_freezing_spritesheet_36: 1591053061
+      19_freezing_spritesheet_37: 807989662
+      19_freezing_spritesheet_38: 905109734
+      19_freezing_spritesheet_39: -38069145
+      19_freezing_spritesheet_4: 12313357
+      19_freezing_spritesheet_40: 1840258374
+      19_freezing_spritesheet_41: -1608075151
+      19_freezing_spritesheet_42: 1213287071
+      19_freezing_spritesheet_43: -1221463198
+      19_freezing_spritesheet_44: -301480188
+      19_freezing_spritesheet_45: -1658570665
+      19_freezing_spritesheet_46: -1066689105
+      19_freezing_spritesheet_47: 922444744
+      19_freezing_spritesheet_48: 223028898
+      19_freezing_spritesheet_49: 271885495
+      19_freezing_spritesheet_5: -1411317338
+      19_freezing_spritesheet_50: -1461239528
+      19_freezing_spritesheet_51: 309862805
+      19_freezing_spritesheet_52: -1881555214
+      19_freezing_spritesheet_53: -139809984
+      19_freezing_spritesheet_54: -330465433
+      19_freezing_spritesheet_55: 1561007138
+      19_freezing_spritesheet_56: 2047429720
+      19_freezing_spritesheet_57: 792238208
+      19_freezing_spritesheet_58: 234607815
+      19_freezing_spritesheet_59: -960242466
+      19_freezing_spritesheet_6: -1458134585
+      19_freezing_spritesheet_60: -2108842024
+      19_freezing_spritesheet_61: 934879026
+      19_freezing_spritesheet_62: 1756714200
+      19_freezing_spritesheet_63: -1868635111
+      19_freezing_spritesheet_64: 1176358967
+      19_freezing_spritesheet_65: -1322249309
+      19_freezing_spritesheet_66: -384800336
+      19_freezing_spritesheet_67: -384439001
+      19_freezing_spritesheet_68: -534101696
+      19_freezing_spritesheet_69: -1321154009
+      19_freezing_spritesheet_7: 576152158
+      19_freezing_spritesheet_70: 861607763
+      19_freezing_spritesheet_71: -857410195
+      19_freezing_spritesheet_72: 296480638
+      19_freezing_spritesheet_73: -1014965125
+      19_freezing_spritesheet_74: -1734594125
+      19_freezing_spritesheet_75: -395701438
+      19_freezing_spritesheet_76: 1017108631
+      19_freezing_spritesheet_77: -1227794032
+      19_freezing_spritesheet_78: -2066761308
+      19_freezing_spritesheet_79: -367361336
+      19_freezing_spritesheet_8: 1435603328
+      19_freezing_spritesheet_80: -9262005
+      19_freezing_spritesheet_81: 518040203
+      19_freezing_spritesheet_82: 1145455435
+      19_freezing_spritesheet_83: -1408970784
+      19_freezing_spritesheet_84: -359032935
+      19_freezing_spritesheet_85: -1104525838
+      19_freezing_spritesheet_9: 2037721145
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

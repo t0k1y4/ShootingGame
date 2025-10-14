@@ -18,6 +18,8 @@ public class ShopUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI message;
     [SerializeField] private TextMeshProUGUI refPrice;
 
+    private Color defaultColor=Color.yellow;
+
 
     [SerializeField] private int refleshPrice=5;
     void OnEnable()
@@ -43,6 +45,7 @@ public class ShopUI : MonoBehaviour
             {
                 itemNames[i].text = smg.availableWeapons[i].weaponName + "\n$" +
                                     smg.availableWeapons[i].price;
+                itemNames[i].color = defaultColor;
                 itemIcons[i].sprite = smg.availableWeapons[i].icon;
                 buttons[i].interactable = true;
             }
@@ -98,6 +101,7 @@ public class ShopUI : MonoBehaviour
         if (PlayerStats.Instance.money < smg.availableWeapons[index].price) return;
         smg.BuyWeapon(index);
         buttons[index].interactable = false;
+        itemNames[index].color = Color.black;
         money.text = "$" + PlayerStats.Instance.money;
     }
 

@@ -30,6 +30,11 @@ public class BulletShooter : MonoBehaviour
         bulletScripts = bulletPrefab.GetComponent<BulletController>();
     }
 
+    void Start()
+    {
+        ChangeStatus();
+    }
+
     void Update()
     {
         if (Time.deltaTime == 0 && !timeChenge)
