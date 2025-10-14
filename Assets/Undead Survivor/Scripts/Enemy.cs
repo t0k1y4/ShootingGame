@@ -1,5 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Animations;
+using DG.Tweening;
 
 public class Enemy : MonoBehaviour
 {
@@ -17,6 +19,8 @@ public class Enemy : MonoBehaviour
     Rigidbody2D rb;
     GameObject gc;
     GameController gameController;
+    public float bombTimer = 5f;
+    bool isBomb;
 
     void Start()
     {
@@ -28,6 +32,14 @@ public class Enemy : MonoBehaviour
         wallInstance = Wall.Instance;
         gc = GameObject.Find("GameController");
         gameController = gc.GetComponent<GameController>();
+        if (gameObject.name.Contains("Bomb"))
+        {
+            isBomb = true;
+        }
+        else
+        {
+            isBomb = false;
+        }
 
         //死んだ音
         deadSound = GetComponent<AudioSource>();
@@ -47,14 +59,25 @@ public class Enemy : MonoBehaviour
     public void Damage(float damage)
     {
         hp -= damage;
-        //deadSound.Play();
+        at.SetTrigger("Hit");
         if (hp <= 0)
         {
             PlayerStats.Instance.AddMoney(1 * (int)difficalty);
             gameController.KilledCount();
+            if (gameObject.name.Contains("Boss"))
+            {
+                at.SetBool("DeadBoss", true);
+            }
+            else
+            {
+                at.SetBool("Dead", true);
+            }
+            float animationLength = at.GetCurrentAnimatorStateInfo(0).length;
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+            transform.localScale *= 2f;
             //敵が死んだらサウンドを再生
             AudioSource.PlayClipAtPoint(deadSound.clip, transform.position);
-            Destroy(gameObject);
+            Destroy(gameObject, animationLength);
         }
     }
     void OnTriggerEnter2D(Collider2D collision)
@@ -80,14 +103,28 @@ public class Enemy : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {
-
-        if (collision.gameObject.CompareTag("Wall"))
+        if (collision.gameObject.CompareTag("Wall") && !isBomb)
         {
             atkTimer += Time.deltaTime;
             if (atkTimer > atkInterval)
             {
                 wallInstance.WallDamage(pow);
                 atkTimer = 0;
+            }
+        }
+        else
+        {
+            bombTimer -= Time.deltaTime;
+            Debug.Log("爆発まで : " + bombTimer);
+            if (bombTimer < 0)
+            {
+                at.SetBool("Bomb", true);
+                float animationLength = at.GetCurrentAnimatorStateInfo(0).length;
+                rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+                transform.localScale *= 2f;
+                AudioSource.PlayClipAtPoint(deadSound.clip, transform.position);
+                wallInstance.WallDamage(pow);
+                Destroy(gameObject,animationLength);
             }
         }
     }

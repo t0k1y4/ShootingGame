@@ -154,10 +154,10 @@ TextureImporter:
       name: 4_2_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 29
-        width: 14
-        height: 14
+        x: 0
+        y: 0
+        width: 72
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,10 +176,10 @@ TextureImporter:
       name: 4_2_1
       rect:
         serializedVersion: 2
-        x: 99
-        y: 28
-        width: 9
-        height: 11
+        x: 72
+        y: 0
+        width: 72
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,10 +198,10 @@ TextureImporter:
       name: 4_2_2
       rect:
         serializedVersion: 2
-        x: 101
-        y: 37
-        width: 15
-        height: 8
+        x: 144
+        y: 0
+        width: 72
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,10 +220,10 @@ TextureImporter:
       name: 4_2_3
       rect:
         serializedVersion: 2
-        x: 170
-        y: 23
-        width: 93
-        height: 26
+        x: 216
+        y: 0
+        width: 72
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,33 +238,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: 4_2_4
-      rect:
-        serializedVersion: 2
-        x: 106
-        y: 27
-        width: 12
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b72f457632ea19990800000000000000
-      internalID: -7380926847202823557
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5d7a181b8020b414e8fd9d7bc65ed8ef
     internalID: 0
     vertices: []
     indices: 
@@ -278,7 +256,6 @@ TextureImporter:
       4_2_1: 6497943945498544369
       4_2_2: -4904262747517926329
       4_2_3: 7313577744590606653
-      4_2_4: -7380926847202823557
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

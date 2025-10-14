@@ -10171,6 +10171,10 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3670501238103615133, guid: e6674a14527d5e940a8a712b02678b79, type: 3}
+      propertyPath: 'allWeaponData.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f2f73d7ff944ee44eb5e7539b2409583, type: 2}
+    - target: {fileID: 3670501238103615133, guid: e6674a14527d5e940a8a712b02678b79, type: 3}
       propertyPath: 'quantityTexts.Array.data[0]'
       value: 
       objectReference: {fileID: 8680651155714433059}
