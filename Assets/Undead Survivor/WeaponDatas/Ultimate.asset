@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ultimate
   m_EditorClassIdentifier: 
   weaponName: Ultimate
-  attackPower: 30
+  attackPower: 1
   icon: {fileID: 2690274267995810836, guid: 205c1863e09e4f843885633d02867615, type: 3}
   price: 50
   text: 
