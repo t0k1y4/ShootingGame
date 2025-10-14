@@ -1,0 +1,368 @@
+fileFormatVersion: 2
+guid: 65b7ae2392d3b7a4285ee328a6552b9b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2944516581613619539
+    second: fleeze_0
+  - first:
+      213: -4101349882725390549
+    second: fleeze_1
+  - first:
+      213: 6945299831963421008
+    second: fleeze_2
+  - first:
+      213: 707315253936978171
+    second: fleeze_3
+  - first:
+      213: -3510949744851192869
+    second: fleeze_4
+  - first:
+      213: -798314602959859351
+    second: fleeze_5
+  - first:
+      213: -3256122840725734263
+    second: fleeze_6
+  - first:
+      213: 5007740840834379230
+    second: fleeze_7
+  - first:
+      213: -524249940188047155
+    second: fleeze_8
+  - first:
+      213: -3120222417548915008
+    second: fleeze_9
+  - first:
+      213: -5092813559619190975
+    second: fleeze_10
+  - first:
+      213: 2002041709475998316
+    second: fleeze_11
+  - first:
+      213: -2957384659307307121
+    second: fleeze_12
+  - first:
+      213: -7433875854341727306
+    second: fleeze_13
+  - first:
+      213: -6946716214023108335
+    second: fleeze_14
+  - first:
+      213: -5734455605723075463
+    second: fleeze_15
+  - first:
+      213: -8557954612416539079
+    second: fleeze_16
+  - first:
+      213: -7513228106578650557
+    second: fleeze_17
+  - first:
+      213: -1331093924296618547
+    second: fleeze_18
+  - first:
+      213: -6855785756253100454
+    second: fleeze_19
+  - first:
+      213: -321141513910691251
+    second: fleeze_20
+  - first:
+      213: -4047506131216742850
+    second: fleeze_21
+  - first:
+      213: 6458094935786157619
+    second: fleeze_22
+  - first:
+      213: 7837012632679796053
+    second: fleeze_23
+  - first:
+      213: 5477997413475187888
+    second: fleeze_24
+  - first:
+      213: -7752634115979627616
+    second: fleeze_25
+  - first:
+      213: 5310684016037699811
+    second: fleeze_26
+  - first:
+      213: 206755444982225873
+    second: fleeze_27
+  - first:
+      213: 6608667924126744829
+    second: fleeze_28
+  - first:
+      213: -5392138597963480170
+    second: fleeze_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fleeze_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da63cad05c9f227d0800000000000000
+      internalID: -2944516581613619539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fleeze_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b272094f2041517c0800000000000000
+      internalID: -4101349882725390549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fleeze_2
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05982ce3669a26060800000000000000
+      internalID: 6945299831963421008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fleeze_3
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf8f027d973e0d900800000000000000
+      internalID: 707315253936978171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fleeze_4
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd375e11fc9964fc0800000000000000
+      internalID: -3510949744851192869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fleeze_5
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96112972911dbe4f0800000000000000
+      internalID: -798314602959859351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fleeze_6
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98cb18d278defc2d0800000000000000
+      internalID: -3256122840725734263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 56da72107ba807e4182f85c01fbc72cf
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fleeze_0: -2944516581613619539
+      fleeze_1: -4101349882725390549
+      fleeze_2: 6945299831963421008
+      fleeze_3: 707315253936978171
+      fleeze_4: -3510949744851192869
+      fleeze_5: -798314602959859351
+      fleeze_6: -3256122840725734263
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

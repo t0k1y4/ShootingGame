@@ -24,6 +24,7 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
     bool supporter1 = false;
     bool supporter2 = false;
     bool supporter3 = false;
+    bool ult = false;
 
     bool userIsAttack = false;
 
@@ -47,10 +48,15 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
     {
         userIsAttack = true;
     }
-    
+
     public void UserAttackEnd()
     {
         userIsAttack = false;
+    }
+    
+    public bool IsCanUltimate()
+    {
+        return ult;
     }
 
     public int GetWeaponInt(WeaponData weapon)
@@ -100,6 +106,9 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
             {
                 supporter3 = true;
                 Debug.Log("仲間3がアクティブになりました");
+            }else if(newWeapon.name.Contains("Ultimate"))
+            {
+                ult = true;
             }
         }
         OnWeaponsChanged?.Invoke();
@@ -137,6 +146,7 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
         supporter1 = false;
         supporter2 = false;
         supporter3 = false;
+        ult = false;
         userIsAttack = false;
         foreach (var weapon in initialWeapons)
         {
