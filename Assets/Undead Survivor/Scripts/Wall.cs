@@ -69,14 +69,15 @@ public class Wall : MonoBehaviour
             // ゲームオーバー処理をここに記述
             // GameManager.Instance.GameOver();
 
-            
-
             //ゲームをポーズする
             Time.timeScale = 0f;
             //gameoverCanvasを表示する
             GameOverCanvas.SetActive(true);
             //continue?
             IsRetryCanvas.SetActive(true);
+
+            //これ以上の更新updateを止める
+            enabled = false;
         }
     }
 
