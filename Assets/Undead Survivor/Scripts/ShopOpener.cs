@@ -9,6 +9,7 @@ public class ShopOpener : MonoBehaviour
     [SerializeField] private RectTransform traderUI;
     [SerializeField] private GameObject messageUI;
     [SerializeField] private TextMeshProUGUI messageUIText;
+    [SerializeField] private TextMeshProUGUI autoshop;
 
     public Vector2 traderTargetPosition;// 店員が登場する画面内の最終位置
     public Vector2 traderInitialPosition;// 店員が表示される初期位置（画面外）
@@ -20,6 +21,7 @@ public class ShopOpener : MonoBehaviour
     private bool isShopOpen = false;
     // Tweenの重複実行を防止するためのフラグ
     private bool isAnimating = false;
+
 
     void Start()
     {
@@ -42,7 +44,7 @@ public class ShopOpener : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     public void Shoping()
@@ -131,7 +133,7 @@ public class ShopOpener : MonoBehaviour
         sequence.Append(messageUI.transform.DOScale(1.2f, 0.15f).SetEase(Ease.OutQuad));
         sequence.Append(messageUI.transform.DOScale(0f, 0.3f).SetEase(Ease.InQuad));
         sequence.Join(traderUI.DOAnchorPos(traderInitialPosition, 0.5f).SetEase(Ease.InBack));
-    
+
         // シーケンスをTimeScaleの影響を受けないようにする
         sequence.SetUpdate(true);
 
@@ -144,5 +146,16 @@ public class ShopOpener : MonoBehaviour
             traderUI.gameObject.SetActive(false); // ショップUIが消えたら店員も非表示にする
             isAnimating = false;
         });
+    }
+
+
+    public void CheckButton()
+    {
+        PlayerStats.Instance.AutoShopButton();
+        if (PlayerStats.Instance.IsAutoShop())
+        {
+            autoshop.text = "ON";
+        }
+        else autoshop.text = "OFF";
     }
 }
