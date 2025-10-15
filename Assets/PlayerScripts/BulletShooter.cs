@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Audio;
 
 
 public class BulletShooter : MonoBehaviour
@@ -127,7 +128,7 @@ public class BulletShooter : MonoBehaviour
             return;
         }
         // 主人公
-        else if (bulletPrefab.name.Equals("HeroBullet") || bulletPrefab.name.Equals("Spark"))
+        else if (bulletPrefab.name.Equals("HeroBullet"))
         {
             bulletScripts.damage = PlayerStats.Instance.GetPlayerDamage();
             rate = PlayerStats.Instance.GetPlayerRate(defaultRate);
@@ -214,7 +215,7 @@ public class BulletShooter : MonoBehaviour
             Debug.Log("null");
             return;
         }
-        else if (bulletPrefab.name.Equals("HeroBullet") || bulletPrefab.name.Equals("Spark")) 
+        else if (bulletPrefab.name.Equals("HeroBullet"))
         {
             BulletSpawn(shooterPos, direction);
         }
