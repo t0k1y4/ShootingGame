@@ -26,7 +26,9 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
     bool supporter3 = false;
     bool ult = false;
 
+
     bool userIsAttack = false;
+    bool autoShop = true;
 
     // 所持金を増やすメソッド
     public void AddMoney(int amount)
@@ -64,6 +66,14 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
         return weapons[weapon];
     }
 
+    public void AutoShopButton()
+    {
+        autoShop = !autoShop;
+    }
+    public bool IsAutoShop()
+    {
+        return autoShop;
+    }
 
     public void AddWeapon(WeaponData newWeapon)
     {

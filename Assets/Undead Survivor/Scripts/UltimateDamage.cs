@@ -14,13 +14,27 @@ public class UltimateDamage : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log(other.gameObject.name);
         // 接触したオブジェクトにEnemyタグが付いているか確認
         if (other.CompareTag("Enemy"))
         {
-        other.GetComponent<Enemy>().Damage(damage);
-        Debug.Log(other.name + "に" + damage + "ダメージを与えました！");
+            other.GetComponent<Enemy>().Damage(damage);
+            Debug.Log(other.name + "に" + damage + "ダメージを与えました！");
         }
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision.gameObject.name);
+        // 接触したオブジェクトにEnemyタグが付いているか確認
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            collision.gameObject.GetComponent<Enemy>().Damage(damage);
+            Debug.Log(collision.gameObject.name + "に" + damage + "ダメージを与えました！");
+        }
+    }
+
+
 
     public void DestroySelf()
     {

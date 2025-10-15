@@ -124,11 +124,13 @@ public class GameController : MonoBehaviour
     {
         PlayerStats.Instance.AddMoney(difficalty * 10);//数字は適当
         shopManager.RefreshShopItems();
-    
-             shopOpener.Shoping();
-        
-       
+        if (PlayerStats.Instance.IsAutoShop())
+        {
+            shopOpener.Shoping();
+        }
     }
+    
+
 
     public void UIUpdater()
     {
