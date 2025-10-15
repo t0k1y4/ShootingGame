@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     Animator at;
     Rigidbody2D rb;
     GameObject gc;
+    BoxCollider2D bc;
     GameController gameController;
     public float bombTimer = 5f;
     bool isBomb;
@@ -28,6 +29,7 @@ public class Enemy : MonoBehaviour
         pow *= difficalty;
         at = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        bc = GetComponent<BoxCollider2D>();
         rb.linearVelocity = new Vector2(speed, rb.linearVelocityY);
         wallInstance = Wall.Instance;
         gc = GameObject.Find("GameController");
@@ -112,18 +114,19 @@ public class Enemy : MonoBehaviour
                 atkTimer = 0;
             }
         }
-        else
+        else if (collision.gameObject.CompareTag("Wall") && isBomb)
         {
             bombTimer -= Time.deltaTime;
             Debug.Log("爆発まで : " + bombTimer);
             if (bombTimer < 0)
             {
+                wallInstance.WallDamage(pow);
+                bc.isTrigger = true;
                 at.SetBool("Bomb", true);
                 float animationLength = at.GetCurrentAnimatorStateInfo(0).length;
                 rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
                 transform.localScale *= 2f;
                 AudioSource.PlayClipAtPoint(deadSound.clip, transform.position);
-                wallInstance.WallDamage(pow);
                 Destroy(gameObject,animationLength);
             }
         }
