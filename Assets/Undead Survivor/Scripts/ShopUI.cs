@@ -3,6 +3,7 @@ using UnityEngine.UI; // UIコンポーネントを使うために必要
 using System.Collections.Generic;
 using TMPro;
 using UnityEditor.U2D.Aseprite;
+using UnityEditor.PackageManager.Requests;
 
 public class ShopUI : MonoBehaviour
 {
@@ -18,7 +19,17 @@ public class ShopUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI message;
     [SerializeField] private TextMeshProUGUI refPrice;
 
-    private Color defaultColor=Color.yellow;
+    AudioSource equipment; //ストップボタンのオーディオソース
+    public AudioClip equipSound;  //装備品を購入したときの音
+    public AudioClip reloadSound;  //リロードボタンを押したときの音
+
+    private Color defaultColor = Color.yellow;
+
+    void Awake()
+    {
+        equipment = GetComponent<AudioSource>();
+        
+    }
 
 
     [SerializeField] private int refleshPrice=5;
@@ -64,6 +75,9 @@ public class ShopUI : MonoBehaviour
     public void RefleshShop()
     {
         if (PlayerStats.Instance.money < refleshPrice) return;
+        //更新ボタンの音を鳴らす
+        equipment.clip = reloadSound;
+        equipment.Play();
         PlayerStats.Instance.money -= refleshPrice;
         refleshPrice +=(int)refleshPrice/2;
         smg.RefreshShopItems();
@@ -98,10 +112,18 @@ public class ShopUI : MonoBehaviour
 
     void Buy(int index)
     {
+        // ① 所持金が足りなければ購入処理を中断
         if (PlayerStats.Instance.money < smg.availableWeapons[index].price) return;
+        // ② 武器購入処理
         smg.BuyWeapon(index);
+        //武器装備音を鳴らす
+        equipment.clip = equipSound;
+        equipment.Play();
+        // ③ 該当ボタンを非アクティブに（再購入防止）
         buttons[index].interactable = false;
+        // ④ アイテム名の色を黒に変更（購入済みの視覚的表現）
         itemNames[index].color = Color.black;
+        // ⑤ 所持金表示を更新
         money.text = "$" + PlayerStats.Instance.money;
     }
 

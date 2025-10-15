@@ -12,7 +12,9 @@ public class ShopOpener : MonoBehaviour
 
     public Vector2 traderTargetPosition;// 店員が登場する画面内の最終位置
     public Vector2 traderInitialPosition;// 店員が表示される初期位置（画面外）
-
+    AudioSource shopSound; //オーディオソース
+    public AudioClip openSound; //ショップが開くときの音
+    public AudioClip closeSound; //ショップが閉じるときの音
 
     // ショップUIの現在の表示状態
     private bool isShopOpen = false;
@@ -21,6 +23,7 @@ public class ShopOpener : MonoBehaviour
 
     void Start()
     {
+        shopSound = GetComponent<AudioSource>();
         // ゲーム開始時はショップUIを非表示にしておく
         if (shopUI != null)
         {
@@ -52,11 +55,17 @@ public class ShopOpener : MonoBehaviour
         {
             // ショップを閉じる
             CloseShopUI();
+            //サウンド再生
+            shopSound.clip = closeSound;
+            shopSound.Play();
         }
         else
         {
             // ショップを開く
             OpenShopUI();
+            //サウンド再生
+            shopSound.clip = openSound;
+            shopSound.Play();
         }
 
         isShopOpen = !isShopOpen;

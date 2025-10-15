@@ -8,6 +8,9 @@ public class Wall : MonoBehaviour
     public GameObject GameOverCanvas; //gameover表示オブジェクト
     public GameObject IsRetryCanvas; //continue?表示オブジェクト
 
+    AudioSource dead; //死亡時のオーディオソース
+    public AudioClip deadSound;  //死んだときの音
+
     public static Wall Instance { get; private set; }
     AudioSource destroySound;    //バリケード崩壊音
     public float WallHp { get; private set; }
@@ -29,7 +32,6 @@ public class Wall : MonoBehaviour
         SceneManager.LoadScene("StartScene"); // タイトル画面など別シーン名に変更
     }
 
-
     private void Awake()
     {
         //gameoverは最初非表示
@@ -38,6 +40,7 @@ public class Wall : MonoBehaviour
 
         //死んだ音
         destroySound = GetComponent<AudioSource>();
+        dead = GetComponent<AudioSource>();
 
         if (Instance == null)
         {
@@ -45,7 +48,7 @@ public class Wall : MonoBehaviour
             WallMaxHp = 100;
             WallHp = WallMaxHp;
             Debug.Log(WallHp);
-            
+
         }
         else
         {
@@ -65,6 +68,8 @@ public class Wall : MonoBehaviour
         {
             //バリケードが壊れたらサウンドを再生
             AudioSource.PlayClipAtPoint(destroySound.clip, transform.position);
+            dead.clip = deadSound;
+            dead.Play();
             Debug.Log("ゲームオーバー");
             // ゲームオーバー処理をここに記述
             // GameManager.Instance.GameOver();
