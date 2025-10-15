@@ -35,7 +35,7 @@ public class ShopUI : MonoBehaviour
     [SerializeField] private int refleshPrice=5;
     void OnEnable()
     {
-        money.text = PlayerStats.Instance.money + "$";
+        money.text = "$"+PlayerStats.Instance.money;
         message.text = "What do you want?";
     }
 

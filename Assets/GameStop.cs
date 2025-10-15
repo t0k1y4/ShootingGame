@@ -15,16 +15,6 @@ public class GameStop : MonoBehaviour
         //Button btn = GetComponent<Button>();
         //btn.onClick.AddListener(PlayClickSound);
         stop = GetComponent<AudioSource>();
-        if (stop == null)
-        {
-            Debug.Log("null");
-
-        }
-        else
-        {
-            Debug.Log("not null");
-        }
-        Debug.Break();
     }
 
     void PlayClickSound()
