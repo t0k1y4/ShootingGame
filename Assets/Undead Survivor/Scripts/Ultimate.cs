@@ -10,24 +10,28 @@ public class Ultimate : MonoBehaviour
     public Image ultimateImage;
     public Button ultButton;
     public GameObject ult1;
-    public void Spetial()
+    public GameObject beam;
+    public GameObject explosion;
+    public  CameraShaker cameraShaker;
+
+    public void Special()
     {
         if (PlayerStats.Instance.IsCanUltimate())
         {
-            switch (PlayerStats.Instance.GetWeaponInt(ultimate))
+            if (PlayerStats.Instance.GetWeaponInt(ultimate) > 0 && PlayerStats.Instance.GetWeaponInt(ultimate) < 3)
             {
-                // case句の後にコロン(:)を記述
-                case 1:
-                    Instantiate(ult1);
-                    StartCoroutine(CoolTime());
-                    break;
-                case 2:
-                    Instantiate(ult1);
-                    StartCoroutine(CoolTime());
-                    break;
-            }
-        }
 
+                Instantiate(ult1);
+                cameraShaker.Shake();
+                StartCoroutine(CoolTime());
+            }
+            else
+            {
+                StartCoroutine(Ultimate2());
+                StartCoroutine(CoolTime());
+            }
+
+        }
     }
 
 
@@ -41,5 +45,16 @@ public class Ultimate : MonoBehaviour
             .SetEase(Ease.Linear);
         yield return new WaitForSeconds(coolTime);
         ultButton.interactable = true;
+    }
+
+    IEnumerator Ultimate2()
+    {
+        Instantiate(beam);
+        yield return new WaitForSeconds(0.7f);
+        Instantiate(explosion);
+        cameraShaker.Shake();
+        yield return new WaitForSeconds(1.5f);
+        Instantiate(ult1);
+        cameraShaker.Shake();
     }
 }

@@ -1092,6 +1092,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1215,8 +1216,24 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 619394802}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f9758e701ca80429f2b15a9742cf3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1
+  strength: {x: 0, y: 1, z: 0}
+  vibrato: 10
+  randomness: 90
 --- !u!224 &549355833 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6042732398132792401, guid: e6674a14527d5e940a8a712b02678b79, type: 3}
@@ -1314,8 +1331,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 519420032}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &651130869 stripped
@@ -10654,6 +10670,9 @@ MonoBehaviour:
   ultimateImage: {fileID: 549355834}
   ultButton: {fileID: 2091623171}
   ult1: {fileID: 7755101050876875519, guid: 9f1355a6f59818045924b13d2a7b9416, type: 3}
+  beam: {fileID: 5869560240911285686, guid: 3d46c16e10a0e9241b1d819a6b64cef7, type: 3}
+  explosion: {fileID: 2306814887326571165, guid: fa7f4016963ae994a85cc96a75844aaa, type: 3}
+  cameraShaker: {fileID: 519420033}
 --- !u!114 &2091623171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10700,7 +10719,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2091623170}
         m_TargetAssemblyTypeName: Ultimate, Assembly-CSharp
-        m_MethodName: Spetial
+        m_MethodName: Special
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11310,6 +11329,7 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 1003736485}
   - {fileID: 4681913869199732150}
