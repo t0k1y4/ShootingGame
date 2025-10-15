@@ -127,7 +127,7 @@ public class BulletShooter : MonoBehaviour
             return;
         }
         // 主人公
-        else if (bulletPrefab.name.Equals("HeroBullet"))
+        else if (bulletPrefab.name.Equals("HeroBullet") || bulletPrefab.name.Equals("Spark"))
         {
             bulletScripts.damage = PlayerStats.Instance.GetPlayerDamage();
             rate = PlayerStats.Instance.GetPlayerRate(defaultRate);
@@ -214,7 +214,7 @@ public class BulletShooter : MonoBehaviour
             Debug.Log("null");
             return;
         }
-        else if (bulletPrefab.name.Equals("HeroBullet"))
+        else if (bulletPrefab.name.Equals("HeroBullet") || bulletPrefab.name.Equals("Spark")) 
         {
             BulletSpawn(shooterPos, direction);
         }

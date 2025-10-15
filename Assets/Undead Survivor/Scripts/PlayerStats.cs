@@ -25,8 +25,8 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
     bool supporter2 = false;
     bool supporter3 = false;
     bool ult = false;
-
     bool userIsAttack = false;
+    bool spark = false;
 
     // 所持金を増やすメソッド
     public void AddMoney(int amount)
@@ -53,10 +53,15 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
     {
         userIsAttack = false;
     }
-    
+
     public bool IsCanUltimate()
     {
         return ult;
+    }
+
+    public bool IsSpark()
+    {
+        return spark;
     }
 
     public int GetWeaponInt(WeaponData weapon)
@@ -85,7 +90,7 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
                 if (newWeapon.weaponName == "MaxHPUp")
                 {
                     Wall.Instance.WallCustom(1.1f, true);
-                    Debug.Log(newWeapon.weaponName+"を使用しました。現在のHP:"+Wall.Instance.WallHp+"/"+Wall.Instance.WallMaxHp);
+                    Debug.Log(newWeapon.weaponName + "を使用しました。現在のHP:" + Wall.Instance.WallHp + "/" + Wall.Instance.WallMaxHp);
                 }
                 Debug.Log(newWeapon.weaponName + "をインベントリに追加しました。現在の個数: " + weapons[newWeapon]);
             }
@@ -95,20 +100,25 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
             if (newWeapon.name.Contains("Supporter1"))
             {
                 supporter1 = true;
-                Debug.Log("仲間1がアクティブになりました");
+                //Debug.Log("仲間1がアクティブになりました");
             }
             else if (newWeapon.name.Contains("Supporter2"))
             {
                 supporter2 = true;
-                Debug.Log("仲間2がアクティブになりました");
+                //Debug.Log("仲間2がアクティブになりました");
             }
             else if (newWeapon.name.Contains("Supporter3"))
             {
                 supporter3 = true;
-                Debug.Log("仲間3がアクティブになりました");
-            }else if(newWeapon.name.Contains("Ultimate"))
+                //Debug.Log("仲間3がアクティブになりました");
+            }
+            else if (newWeapon.name.Contains("Ultimate"))
             {
                 ult = true;
+            }
+            else if (newWeapon.name.Contains("Spark"))
+            {
+                spark = true;
             }
         }
         OnWeaponsChanged?.Invoke();
