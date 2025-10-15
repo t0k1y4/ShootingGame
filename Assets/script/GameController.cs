@@ -90,6 +90,16 @@ public class GameController : MonoBehaviour
         // 敵を倒したときにスコアを加算
         killed += 1;
         killedText.text = killed + ":killed !";
+        // ハイスコア更新処理
+        int highScore = PlayerPrefs.GetInt("HighScore", 0);
+        if (killed > highScore)
+        {
+            //ハイスコアをセットする
+            PlayerPrefs.SetInt("HighScore", (int)killed);
+            //ハイスコアのセーブ
+            PlayerPrefs.Save();
+            Debug.Log("ハイスコア更新！: " + killed);
+        }
         Difficalty();
     }
 

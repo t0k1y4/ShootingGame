@@ -34,11 +34,11 @@ public class Ultimate : MonoBehaviour
 
     IEnumerator CoolTime()
     {
-        float coolTime = 1.6f - (PlayerStats.Instance.GetWeaponCount(ultimateRate.name) / 10);
+        float coolTime = 15.0f - (PlayerStats.Instance.GetWeaponCount(ultimateRate.name) / 10);
         ultButton.interactable = false;
+        ultimateImage.fillAmount = 0; // アニメーション開始前にfillAmountを0にリセット
         ultimateImage.DOFillAmount(1, coolTime)
-    .From(0) // 0から開始
-    .SetEase(Ease.Linear);
+            .SetEase(Ease.Linear);
         yield return new WaitForSeconds(coolTime);
         ultButton.interactable = true;
     }

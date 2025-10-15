@@ -303,5 +303,5 @@ MonoBehaviour:
   speed: 2.5
   isBound: 0
   atkInterval: 1
-  atkTimer: 0
+  atkTimer: 3
   bombTimer: 3

@@ -28,10 +28,5 @@ public class UltimateDamage : MonoBehaviour
         Destroy(gameObject);
 
     }
-    public void HitDamage()
-    {
-        enemy.GetComponent<Enemy>().Damage(damage);
-        Debug.Log(enemy.name + "に" + damage + "ダメージを与えました！");
-    }
 }
 
