@@ -18,8 +18,8 @@ public class UltimateDamage : MonoBehaviour
         // 接触したオブジェクトにEnemyタグが付いているか確認
         if (other.CompareTag("Enemy"))
         {
+            other.GetComponent<Enemy>().Damage(other.GetComponent<Enemy>().hp/2);
             other.GetComponent<Enemy>().Damage(damage);
-            Debug.Log(other.name + "に" + damage + "ダメージを与えました！");
         }
     }
 
@@ -29,8 +29,8 @@ public class UltimateDamage : MonoBehaviour
         // 接触したオブジェクトにEnemyタグが付いているか確認
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            collision.gameObject.GetComponent<Enemy>().Damage(collision.gameObject.GetComponent<Enemy>().hp/2);
             collision.gameObject.GetComponent<Enemy>().Damage(damage);
-            Debug.Log(collision.gameObject.name + "に" + damage + "ダメージを与えました！");
         }
     }
 

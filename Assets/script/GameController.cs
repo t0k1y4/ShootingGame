@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
 
     float coolTime;
     float killed = 0;       // 敵を倒した数
-    int difficalty = 0;     // 難易度
+    public int difficalty = 0;     // 難易度
     public int diff = 10;   // 難易度の上昇量
 
     public EnemyGenerator eg;
