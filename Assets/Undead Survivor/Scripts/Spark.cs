@@ -14,7 +14,7 @@ public class Spark : MonoBehaviour
     {
         sparkSound = gameObject.GetComponent<AudioSource>();
         sparkSound.Play();
-        damage = PlayerStats.Instance.GetWeaponInt(weapon) * weapon.attackPower;
+        damage = PlayerStats.Instance.GetWeaponCount(weapon.name) * weapon.attackPower;
         Destroy(gameObject, 20f);
         InvokeRepeating("PlaySound", 0f, 2f);
     }

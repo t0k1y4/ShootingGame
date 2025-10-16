@@ -199,7 +199,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2239e31eb7e110143814018fc9b7b182, type: 3}
   m_Resource: {fileID: 8300000, guid: 2239e31eb7e110143814018fc9b7b182, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -304,4 +304,5 @@ MonoBehaviour:
   isBound: 0
   atkInterval: 1
   atkTimer: 3
+  damageInterval: 0.5
   bombTimer: 3

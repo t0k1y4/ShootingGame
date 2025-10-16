@@ -21,6 +21,7 @@ public class SparkShooter : MonoBehaviour
         time += Time.deltaTime;
         if (time > rate && PlayerStats.Instance.IsSpark())
         {
+            Debug.Log(PlayerStats.Instance.IsSpark());
             Shoot();
             time = 0;
         }
