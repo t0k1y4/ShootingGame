@@ -37,7 +37,7 @@ public class Enemy : MonoBehaviour
         gc = GameObject.Find("GameController");
         gameController = gc.GetComponent<GameController>();
         difficalty = gameController.difficalty;
-        hp = hp*((difficalty/3)+1);
+        hp = hp*((difficalty/30)+1);
         pow *= difficalty;
         if (gameObject.name.Contains("Bomb"))
         {
