@@ -27,6 +27,12 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
     bool ult = false;
     bool userIsAttack = false;
     bool spark = false;
+    int supCount1 = 0;
+    int supCount2 = 0;
+    int supCount3 = 0;
+    int supLevel1 = 0;
+    int supLevel2 = 0;
+    int supLevel3 = 0;
 
     // 所持金を増やすメソッド
     public void AddMoney(int amount)
@@ -69,6 +75,24 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
         return weapons[weapon];
     }
 
+    public int GetSupporterLevel(int number)
+    {
+        switch (number)
+        {
+            case 1:
+                return supLevel1;
+
+            case 2:
+                return supLevel2;
+
+            case 3:
+                return supLevel3;
+
+            default:
+                return 0;
+        }
+    }
+
 
     public void AddWeapon(WeaponData newWeapon)
     {
@@ -100,17 +124,63 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
             if (newWeapon.name.Contains("Supporter1"))
             {
                 supporter1 = true;
-                //Debug.Log("仲間1がアクティブになりました");
+                supCount1++;
+                if (supCount1 >= 1 && supLevel1 >= 0)
+                {
+                    if (supCount1 >= 3 && supLevel1 >= 1)
+                    {
+                        if (supCount1 >= 7 && supLevel1 >= 2)
+                        {
+                            Debug.Log("レベルアップ");
+                            supLevel1 = 3;
+                            return;
+                        }
+                        supLevel1 = 2;
+                        return;
+                    }
+                    Debug.Log("レベルアップ");
+                    supLevel1 = 1;
+                }
             }
             else if (newWeapon.name.Contains("Supporter2"))
             {
                 supporter2 = true;
-                //Debug.Log("仲間2がアクティブになりました");
+                supCount2++;
+                if (supCount2 >= 1 && supLevel2 >= 0)
+                {
+                    if (supCount2 >= 3 && supLevel2 >= 1)
+                    {
+                        if (supCount2 >= 7 && supLevel2 >= 2)
+                        {
+                            supLevel2 = 3;
+                            return;
+                        }
+                        supLevel2 = 2;
+                        return;
+                    }
+                    Debug.Log("レベルアップ");
+                    supLevel2 = 1;
+                }
             }
             else if (newWeapon.name.Contains("Supporter3"))
             {
                 supporter3 = true;
-                //Debug.Log("仲間3がアクティブになりました");
+                supCount3++;
+                if (supCount3 >= 1 && supLevel3 >= 0)
+                {
+                    if (supCount3 >= 3 && supLevel3 >= 1)
+                    {
+                        if (supCount3 >= 7 && supLevel3 >= 2)
+                        {
+                            supLevel3 = 3;
+                            return;
+                        }
+                        supLevel3 = 2;
+                        return;
+                    }
+                    Debug.Log("レベルアップ");
+                    supLevel3 = 1;
+                }
             }
             else if (newWeapon.name.Contains("Ultimate"))
             {
@@ -156,6 +226,12 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
         supporter1 = false;
         supporter2 = false;
         supporter3 = false;
+        supCount1 = 0;
+        supCount2 = 0;
+        supCount3 = 0;
+        supLevel1 = 0;
+        supLevel2 = 0;
+        supLevel3 = 0;
         ult = false;
         userIsAttack = false;
         foreach (var weapon in initialWeapons)
