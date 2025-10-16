@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-       
+
         at = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
@@ -37,8 +37,8 @@ public class Enemy : MonoBehaviour
         gc = GameObject.Find("GameController");
         gameController = gc.GetComponent<GameController>();
         difficalty = gameController.difficalty;
-        hp = hp*((difficalty/30)+1);
-        pow *= difficalty;
+        hp = hp * ((difficalty / 30) + 1);
+        pow = pow * ((difficalty / 30) + 1);
         if (gameObject.name.Contains("Bomb"))
         {
             isBomb = true;
