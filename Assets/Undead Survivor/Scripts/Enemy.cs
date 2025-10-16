@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Animations;
 using DG.Tweening;
+using System.Collections;
 
 public class Enemy : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Enemy : MonoBehaviour
     public bool isBound;
     public float atkInterval = 1.0f;
     public float atkTimer = 0f;
+    public float damageInterval = 0.5f;
     Wall wallInstance;
     Animator at;
     Rigidbody2D rb;
@@ -22,6 +24,7 @@ public class Enemy : MonoBehaviour
     GameController gameController;
     public float bombTimer = 5f;
     bool isBomb;
+    bool isDamaging;
 
     void Start()
     {
@@ -87,7 +90,19 @@ public class Enemy : MonoBehaviour
         if (collision.CompareTag("Bullet"))
         {
             {
-                Damage(collision.gameObject.GetComponent<BulletController>().damage);
+                if (collision.gameObject.GetComponent<BulletController>() != null)
+                {
+                    Damage(collision.gameObject.GetComponent<BulletController>().damage);
+                }
+                else if (collision.gameObject.GetComponent<Spark>() != null && !isDamaging)
+                {
+                    Debug.Log("スパークダメージ");
+                    StartCoroutine(DamageOverTime(collision.gameObject.GetComponent<Spark>().damage));
+                }
+                else
+                {
+                    return;
+                }
             }
         }
     }
@@ -127,8 +142,28 @@ public class Enemy : MonoBehaviour
                 rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
                 transform.localScale *= 2f;
                 AudioSource.PlayClipAtPoint(deadSound.clip, transform.position);
-                Destroy(gameObject,animationLength);
+                Destroy(gameObject, animationLength);
             }
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponent<Spark>() != null)
+        {
+            isDamaging = false;
+        }
+    }
+
+    IEnumerator DamageOverTime(float damage)
+    {
+        isDamaging = true;
+        while (isDamaging)
+        {
+            // ダメージ処理
+            Damage(damage);
+
+            yield return new WaitForSeconds(damageInterval);
         }
     }
 }

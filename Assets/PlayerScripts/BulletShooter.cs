@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Audio;
 
 
 public class BulletShooter : MonoBehaviour
@@ -137,72 +138,22 @@ public class BulletShooter : MonoBehaviour
         {
             bulletScripts.damage = PlayerStats.Instance.GetSupporterDamage(1);
             rate = PlayerStats.Instance.GetSupporterRate(1, defaultRate);
-            int supCount1 = PlayerStats.Instance.GetWeaponCount("Supporter1");
-            if (supCount1 >= 1 && supLevel1 >= 0)
-            {
-                if (supCount1 >= 3 && supLevel1 >= 1)
-                {
-                    if (supCount1 >= 7 && supLevel1 >= 2)
-                    {
-                        supLevel1 = 3;
-                        Debug.Log("仲間1のレベルが上がった：" + supLevel1);
-                        return;
-                    }
-                    supLevel1 = 2;
-                    Debug.Log("仲間1のレベルが上がった：" + supLevel1);
-                    return;
-                }
-                supLevel1 = 1;
-                Debug.Log("仲間1のレベルが上がった：" + supLevel1);
-            }
+            supLevel1 = PlayerStats.Instance.GetSupporterLevel(1);
+            
         }
         // 仲間２
         else if (bulletPrefab.name.Equals("SupporterBullet2"))
         {
             bulletScripts.damage = PlayerStats.Instance.GetSupporterDamage(2);
             rate = PlayerStats.Instance.GetSupporterRate(2, defaultRate);
-            int supCount2 = PlayerStats.Instance.GetWeaponCount("Supporter2");
-            if (supCount2 >= 1 && supLevel2 >= 0)
-            {
-                if (supCount2 >= 3 && supLevel2 >= 1)
-                {
-                    if (supCount2 >= 7 && supLevel2 >= 2)
-                    {
-                        supLevel2 = 3;
-                        Debug.Log("仲間2のレベルが上がった：" + supLevel2);
-                        return;
-                    }
-                    supLevel2 = 2;
-                    Debug.Log("仲間2のレベルが上がった：" + supLevel2);
-                    return;
-                }
-                supLevel2 = 1;
-                Debug.Log("仲間2のレベルが上がった：" + supLevel2);
-            }
+            supLevel2 = PlayerStats.Instance.GetSupporterLevel(2);
         }
         // 仲間３
         else if (bulletPrefab.name.Equals("SupporterBullet3"))
         {
             bulletScripts.damage = PlayerStats.Instance.GetSupporterDamage(3);
             rate = PlayerStats.Instance.GetSupporterRate(3, defaultRate);
-            int supCount3 = PlayerStats.Instance.GetWeaponCount("Supporter3");
-            if (supCount3 >= 1 && supLevel3 >= 0)
-            {
-                if (supCount3 >= 3 && supLevel3 >= 1)
-                {
-                    if (supCount3 >= 7 && supLevel3 >= 2)
-                    {
-                        supLevel3 = 3;
-                        Debug.Log("仲間3のレベルが上がった：" + supLevel3);
-                        return;
-                    }
-                    supLevel3 = 2;
-                    Debug.Log("仲間3のレベルが上がった：" + supLevel3);
-                    return;
-                }
-                supLevel3 = 1;
-                Debug.Log("仲間3のレベルが上がった：" + supLevel3);
-            }
+            supLevel3 = PlayerStats.Instance.GetSupporterLevel(3);
         }
     }
 

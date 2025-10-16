@@ -9,6 +9,7 @@ public class Inventory : MonoBehaviour
     // インベントリUIのアイコンImageの配列
     [SerializeField] private Image[] itemIcons; // アイコン画像を表示するUIの配列
     [SerializeField] private TextMeshProUGUI[] quantityTexts;
+    [SerializeField] private TextMeshProUGUI[] LevelTexts;
     [SerializeField] private WeaponData[] allWeaponData;
 
     void OnEnable()
@@ -42,6 +43,20 @@ public class Inventory : MonoBehaviour
         foreach (var ownedWeaponPair in ownedWeapons)
         {
             WeaponData weapon = ownedWeaponPair; // KeyValuePairからキー(WeaponData)を取得
+            Debug.Log("weaponname:"+weapon.name);
+            if (weapon.name.Contains("Supporter"))
+            {
+                Debug.Log("Sup");
+                int ifIndex = System.Array.IndexOf(allWeaponData, weapon);
+                String ifText = "" + PlayerStats.Instance.GetWeaponInt(weapon);
+                int num = ifIndex - 7;
+                string LvText = "Lv" + PlayerStats.Instance.GetSupporterLevel(num);
+                Debug.Log("LvText:" + LvText);
+                itemIcons[ifIndex].sprite = weapon.icon;
+                quantityTexts[ifIndex].text = ifText;
+                LevelTexts[ifIndex].text = LvText;
+                continue;
+            }
 
             // allWeaponData配列内で、所持している武器が何番目にあるかを検索
             int index = System.Array.IndexOf(allWeaponData, weapon);
