@@ -13,8 +13,8 @@ public class Wall : MonoBehaviour
 
     public static Wall Instance { get; private set; }
     AudioSource destroySound;    //バリケード崩壊音
-    public float WallHp { get; private set; }
-    public float WallMaxHp { get; private set; }
+    public float WallHp { get;  set; }
+    public float WallMaxHp { get;  set; }
     public event Action OnWallHpChanged;
 
 

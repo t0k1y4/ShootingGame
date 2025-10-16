@@ -12,7 +12,9 @@ public class Ultimate : MonoBehaviour
     public GameObject ult1;
     public GameObject beam;
     public GameObject explosion;
-    public  CameraShaker cameraShaker;
+    public CameraShaker cameraShaker;
+    AudioSource audioSource;
+    public AudioClip cool;
 
     public void Special()
     {
@@ -45,6 +47,7 @@ public class Ultimate : MonoBehaviour
             .SetEase(Ease.Linear);
         yield return new WaitForSeconds(coolTime);
         ultButton.interactable = true;
+        audioSource.PlayOneShot(cool);
     }
 
     IEnumerator Ultimate2()

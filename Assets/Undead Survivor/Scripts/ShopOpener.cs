@@ -10,6 +10,8 @@ public class ShopOpener : MonoBehaviour
     [SerializeField] private GameObject messageUI;
     [SerializeField] private TextMeshProUGUI messageUIText;
     [SerializeField] private TextMeshProUGUI autoshop;
+    [SerializeField] private TextMeshProUGUI newText;
+
 
     public Vector2 traderTargetPosition;// 店員が登場する画面内の最終位置
     public Vector2 traderInitialPosition;// 店員が表示される初期位置（画面外）
@@ -63,6 +65,7 @@ public class ShopOpener : MonoBehaviour
         }
         else
         {
+            newText.text = "";
             // ショップを開く
             OpenShopUI();
             //サウンド再生

@@ -7,7 +7,6 @@ public class AttackTrigger : MonoBehaviour
 
     private float damage; // 攻撃力
     public WeaponData weapon;
-    Collider2D enemy;
 
     void Start()
     {
@@ -19,17 +18,14 @@ public class AttackTrigger : MonoBehaviour
         // 接触したオブジェクトにEnemyタグが付いているか確認
         if (other.CompareTag("Enemy"))
         {
-            enemy = other;
+            other.GetComponent<Enemy>().Damage(damage);
+            Debug.Log(other.name + "に" + damage + "ダメージを与えました！");
         }
     }
 
     public void DestroySelf()
     {
-        if (enemy!=null)
-        {
-            enemy.GetComponent<Enemy>().Damage(damage);
-            Debug.Log(enemy.name + "に" + damage + "ダメージを与えました！");
-        }
+
         Destroy(gameObject);
 
     }

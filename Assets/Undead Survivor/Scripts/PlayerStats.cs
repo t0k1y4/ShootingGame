@@ -55,7 +55,7 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
     {
         userIsAttack = false;
     }
-    
+
     public bool IsCanUltimate()
     {
         return ult;
@@ -92,11 +92,6 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
             else
             {
                 weapons.Add(newWeapon, 1); // 持っていなければ追加する
-                if (newWeapon.weaponName == "MaxHPUp")
-                {
-                    Wall.Instance.WallCustom(1.1f, true);
-                    Debug.Log(newWeapon.weaponName+"を使用しました。現在のHP:"+Wall.Instance.WallHp+"/"+Wall.Instance.WallMaxHp);
-                }
                 Debug.Log(newWeapon.weaponName + "をインベントリに追加しました。現在の個数: " + weapons[newWeapon]);
             }
 
@@ -116,10 +111,17 @@ public class PlayerStats : SingletonScriptableObject<PlayerStats>
             {
                 supporter3 = true;
                 Debug.Log("仲間3がアクティブになりました");
-            }else if(newWeapon.name.Contains("Ultimate"))
+            }
+            else if (newWeapon.name.Contains("Ultimate"))
             {
                 ult = true;
             }
+            else if (newWeapon.weaponName == "MaxHPUp")
+            {
+                Wall.Instance.WallCustom(1.1f, true);
+                Debug.Log(newWeapon.weaponName + "を使用しました。現在のHP:" + Wall.Instance.WallHp + "/" + Wall.Instance.WallMaxHp);
+            }
+
         }
         OnWeaponsChanged?.Invoke();
     }

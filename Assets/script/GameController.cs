@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
     public TextMeshProUGUI killedText;
     public TextMeshProUGUI difficaltyText;
     public TextMeshProUGUI wallHpText;
+    public TextMeshProUGUI newText;
     public ShopManager shopManager;
     public ShopOpener shopOpener;
     public GameObject attackHitboxPrefab;
@@ -128,6 +129,7 @@ public class GameController : MonoBehaviour
         {
             shopOpener.Shoping();
         }
+        else newText.text = "NEW!!";
     }
     
 

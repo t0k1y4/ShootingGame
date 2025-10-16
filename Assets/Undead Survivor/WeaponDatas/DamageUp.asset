@@ -15,6 +15,6 @@ MonoBehaviour:
   weaponName: DamageUp
   attackPower: 1
   icon: {fileID: 5523630204628833594, guid: 3bce742a8408eaa4d88b4e53e09ee3f6, type: 3}
-  price: 10
+  price: 15
   text: default
   rate: 1

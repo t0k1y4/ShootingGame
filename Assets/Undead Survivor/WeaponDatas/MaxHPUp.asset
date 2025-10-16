@@ -15,6 +15,6 @@ MonoBehaviour:
   weaponName: MaxHPUp
   attackPower: 0
   icon: {fileID: 860910309584662230, guid: 1a2991919f2f1b54f85dfa4841cbd510, type: 3}
-  price: 0
+  price: 50
   text: 
   rate: 0

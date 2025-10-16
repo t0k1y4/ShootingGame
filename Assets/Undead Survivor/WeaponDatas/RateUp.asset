@@ -15,6 +15,6 @@ MonoBehaviour:
   weaponName: RateUp
   attackPower: 0
   icon: {fileID: -2582933367587857531, guid: 56f54646c9bb82149b82efa79dda08a9, type: 3}
-  price: 10
+  price: 15
   text: 
   rate: 1

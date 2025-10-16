@@ -12,13 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16d4e28e7a5b8364cb3e1110340a1927, type: 3}
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
-  money: 1031
-  initialMoney: 1000
+  money: 1374
+  initialMoney: 100
   initialWeapons:
   - {fileID: 11400000, guid: dea62a84c20389f47ad6d8a08336c0e5, type: 2}
   - {fileID: 11400000, guid: e8045d7a268ba3349ad2f179bae90252, type: 2}
-  - {fileID: 11400000, guid: 1fc8a5a72c97d8547abfa0a16e3bcc6b, type: 2}
-  - {fileID: 11400000, guid: 1fc8a5a72c97d8547abfa0a16e3bcc6b, type: 2}
   - {fileID: 11400000, guid: 1fc8a5a72c97d8547abfa0a16e3bcc6b, type: 2}
   diameterRate: 0.05
   diameterSupRate: 0.03
